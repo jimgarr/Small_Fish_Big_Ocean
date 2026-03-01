@@ -1,0 +1,52 @@
+{
+	"name": "Map",
+	"plugin-id": "Sprite",
+	"sid": 192189720444114,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 808,
+						"height": 435,
+						"originX": 0.5,
+						"originY": 0.6858846918489065,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 9136082,
+						"collisionPoly": {
+							"points": [
+								0.001075268817204301,
+								0.0019880715705765406,
+								0.9989247311827957,
+								0.0019880715705765406,
+								0.9989247311827957,
+								0.9980119284294234,
+								0.001075268817204301,
+								0.9980119284294234
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 710130812802797,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

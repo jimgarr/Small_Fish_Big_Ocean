@@ -1,0 +1,648 @@
+{
+	"name": "Map Selection Event Sheet",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 659842077885091,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "SanDiegoSelector"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "SanDiego",
+					"sid": 296910319104398,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "SanDiegoSelector",
+					"sid": 254255506183073,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "SanDiegoPlayButton",
+					"sid": 382080749205900,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 989137123723273
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 484116741126504,
+					"parameters": {
+						"object": "SanDiegoSelector"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "SanDiegoPlayButton",
+					"sid": 581713144247600,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "SanDiego",
+					"sid": 965246067296182,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "SanDiegoSelector",
+					"sid": 996304725895788,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 538279256719938
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 596659705372596,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "SanDiegoPlayButton"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 863225838520598,
+					"parameters": {
+						"layout": "Level 1"
+					}
+				}
+			],
+			"sid": 389731729399395
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 228429141229655,
+					"parameters": {
+						"object": "SanDiegoPlayButton"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 961528032101799,
+					"parameters": {
+						"layout": "Level 1"
+					}
+				}
+			],
+			"sid": 168110175808924
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 434168308482003,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "AustraliaSelector"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "Australia",
+					"sid": 612553446553802,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "AustraliaSelector",
+					"sid": 269130405482418,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "AustraliaPlay",
+					"sid": 348641202757153,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 860431885937948
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 673876148311399,
+					"parameters": {
+						"object": "AustraliaSelector"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "Australia",
+					"sid": 200082256900831,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "AustraliaPlay",
+					"sid": 879041831520393,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "AustraliaSelector",
+					"sid": 357763680252578,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 996506763869766
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 954135551599251,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "AustraliaPlay"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 332425303939199,
+					"parameters": {
+						"layout": "Level 1"
+					}
+				}
+			],
+			"sid": 994430230410744
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 178597141530642,
+					"parameters": {
+						"object": "AustraliaPlay"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 607520469959317,
+					"parameters": {
+						"layout": "Level 1"
+					}
+				}
+			],
+			"sid": 654971472823207
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 797432818815789,
+					"parameters": {
+						"object": "ExitLevelSelection"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "PlayLevel",
+					"sid": 171103804143799,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 915199512574274
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 295563690538256,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "ExitLevelSelection"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "PlayLevel",
+					"sid": 808164347497995,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 336471944422115
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 303890611929568,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "BrazilSelector"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "Brazil",
+					"sid": 627989404713683,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "BrazilPlay",
+					"sid": 824271521301412,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "BrazilSelector",
+					"sid": 349858727519277,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 545599381749604
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 940749383240888,
+					"parameters": {
+						"object": "BrazilSelector"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "Brazil",
+					"sid": 892811256293248,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "BrazilPlay",
+					"sid": 794750883864338,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "BrazilSelector",
+					"sid": 834784616840050,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 815251517093841
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 284758876168213,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "CyprusSelector"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "Cyprus",
+					"sid": 358946692797297,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "CyprusPlay",
+					"sid": 324631696469212,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "CyprusSelector",
+					"sid": 117959529189075,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 350277795824715
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 415607723888684,
+					"parameters": {
+						"object": "CyprusSelector"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "Cyprus",
+					"sid": 838877715777589,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "CyprusPlay",
+					"sid": 830913399136379,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "CyprusSelector",
+					"sid": 519195291403131,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 809511284059514
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 728403878518767,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "IndonesiaSelector"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "Indonesia",
+					"sid": 265837470878953,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "IndonesiaPlay",
+					"sid": 527339769530557,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "IndonesiaSelector",
+					"sid": 950512147269574,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 191416720152921
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 236966630673056,
+					"parameters": {
+						"object": "IndonesiaSelector"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "Indonesia",
+					"sid": 691658003271996,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "IndonesiaPlay",
+					"sid": 321799638049162,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "IndonesiaSelector",
+					"sid": 516304719073324,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 125798318871203
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 965205571378241,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "MalawiSelector"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "Malawi",
+					"sid": 290665896967550,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "MalawiPlay",
+					"sid": 397076850077420,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "MalawiSelector",
+					"sid": 842534426311451,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 757842372048616
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 246558963697702,
+					"parameters": {
+						"object": "MalawiSelector"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "Malawi",
+					"sid": 366804323176555,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "MalawiPlay",
+					"sid": 448147797313582,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "MalawiSelector",
+					"sid": 486500234943117,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 173060491929437
+		}
+	],
+	"sid": 849681844193133
+}
