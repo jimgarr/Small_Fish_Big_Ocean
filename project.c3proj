@@ -73,8 +73,10 @@
 			"Map_Selection_Background",
 			"Water_Background",
 			"Cyprus_background",
-			"Wave_1_text",
-			"Level_1_fish"
+			"Level_1_fish",
+			"WaveText",
+			"TimerText",
+			"CyprusLevelBackground"
 		],
 		"subfolders": [
 			{
@@ -132,8 +134,8 @@
 		"items": [
 			"Title Event Sheet",
 			"Map Selection Event Sheet",
-			"Level 1 Event Sheet",
-			"Event sheet 1"
+			"Event sheet 1",
+			"Game Logic"
 		],
 		"subfolders": []
 	},
@@ -155,7 +157,16 @@
 			"subfolders": []
 		},
 		"font": {
-			"items": [],
+			"items": [
+				{
+					"name": "LuckiestGuy-Regular.woff",
+					"type": "application/font-woff",
+					"sid": 283787970570374,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"icon": {

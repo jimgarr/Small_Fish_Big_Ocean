@@ -1,0 +1,472 @@
+{
+	"name": "Game Logic",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "Wave",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "Current wave level",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 926302860670976
+		},
+		{
+			"eventType": "variable",
+			"name": "WaveDuration",
+			"type": "number",
+			"initialValue": "15",
+			"comment": "Amount of time needed to survive the level",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 716796948492212
+		},
+		{
+			"eventType": "variable",
+			"name": "TimeLeft",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "Amount of time left in wave level",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 903016895514547
+		},
+		{
+			"eventType": "variable",
+			"name": "TimeRunning",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "Track when the timer should start",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 616401441355341
+		},
+		{
+			"eventType": "variable",
+			"name": "LastWaveShown",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "Previous wave level shown",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 383314302400372
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Wave Logic",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 452002308033747
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 420708998015110,
+							"parameters": {
+								"variable": "Wave",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 215216260035455,
+							"parameters": {
+								"variable": "TimeLeft",
+								"value": "WaveDuration"
+							}
+						}
+					],
+					"sid": 443192126473412
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 823212301477162
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 441570382197707,
+							"parameters": {
+								"variable": "TimeRunning"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 659071284531980,
+							"parameters": {
+								"variable": "TimeLeft",
+								"value": "max(TimeLeft - dt, 0)"
+							}
+						}
+					],
+					"sid": 335419980781280
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 175169570726192,
+							"parameters": {
+								"first-value": "TimeLeft",
+								"comparison": 3,
+								"second-value": "0"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 446066878046130,
+							"parameters": {
+								"first-value": "Wave",
+								"comparison": 2,
+								"second-value": "5"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 138491706417547,
+							"parameters": {
+								"variable": "TimeRunning"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 922331934360533,
+							"parameters": {
+								"variable": "Wave",
+								"value": "Wave + 1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 670441033974565,
+							"parameters": {
+								"variable": "TimeLeft",
+								"value": "WaveDuration"
+							}
+						}
+					],
+					"sid": 496661266240112
+				}
+			],
+			"sid": 254267802913328
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Fish Movement",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-in-touch",
+							"objectClass": "Touch",
+							"sid": 546504679951387
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "Level_1_fish",
+							"sid": 391765196677079,
+							"parameters": {
+								"x": "Touch.X"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "Level_1_fish",
+							"sid": 829060114948782,
+							"parameters": {
+								"y": "Touch.Y"
+							}
+						}
+					],
+					"sid": 885649434790361
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 720575240829532,
+							"parameters": {
+								"key": 37
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "Level_1_fish",
+							"sid": 519927920888804,
+							"parameters": {
+								"state": "mirrored"
+							}
+						}
+					],
+					"sid": 625988130209745
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 970955966805503,
+							"parameters": {
+								"key": 39
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "Level_1_fish",
+							"sid": 478443200663828,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						}
+					],
+					"sid": 691768945772207
+				}
+			],
+			"sid": 261271709393339
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "HUD",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 741483789969485
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 674248529890876,
+							"parameters": {
+								"variable": "LastWaveShown",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "WaveText",
+							"sid": 651831950891374,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "TimerText",
+							"sid": 860285227765664,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 962597869458211,
+							"parameters": {
+								"variable": "TimeRunning",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 254392510656222
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 874695821197009,
+							"parameters": {
+								"first-value": "LastWaveShown",
+								"comparison": 1,
+								"second-value": "Wave"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 504806056907257,
+							"parameters": {
+								"variable": "LastWaveShown",
+								"value": "Wave"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 123323045127729,
+							"parameters": {
+								"variable": "TimeRunning",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "TimerText",
+							"sid": 710797050480169,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Level_1_fish",
+							"sid": 982043693122513,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "WaveText",
+							"sid": 287162312447069,
+							"parameters": {
+								"text": "\"Wave \" & Wave"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "WaveText",
+							"sid": 864035855453672,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "WaveText",
+							"sid": 270756287428409,
+							"parameters": {
+								"opacity": "100"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 701529191010835,
+							"parameters": {
+								"seconds": "2.0",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Level_1_fish",
+							"sid": 221035490771721,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "WaveText",
+							"sid": 921896706768500,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 407952526000285,
+							"parameters": {
+								"variable": "TimeRunning",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "TimerText",
+							"sid": 446034013561413,
+							"parameters": {
+								"text": "floor(TimeLeft/60) & \":\" & (floor(TimeLeft%60) < 10 ? \"0\" & floor(TimeLeft%60) : floor(TimeLeft%60))"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "TimerText",
+							"sid": 433930058737540,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 640139670284145
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 115165420105818
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "TimerText",
+							"sid": 482247863454063,
+							"parameters": {
+								"text": "floor(TimeLeft/60) & \":\" & (floor(TimeLeft%60) < 10 ? \"0\" & floor(TimeLeft%60) : floor(TimeLeft%60))"
+							}
+						}
+					],
+					"sid": 702618739139256
+				}
+			],
+			"sid": 329397945556845
+		}
+	],
+	"sid": 986032683225876
+}

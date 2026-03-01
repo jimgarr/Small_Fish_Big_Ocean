@@ -101,7 +101,7 @@
 				{
 					"id": "go-to-layout",
 					"objectClass": "System",
-					"sid": 863225838520598,
+					"sid": 710909811128990,
 					"parameters": {
 						"layout": "Level 1"
 					}
@@ -125,7 +125,7 @@
 				{
 					"id": "go-to-layout",
 					"objectClass": "System",
-					"sid": 961528032101799,
+					"sid": 808413332142480,
 					"parameters": {
 						"layout": "Level 1"
 					}
@@ -229,16 +229,7 @@
 					}
 				}
 			],
-			"actions": [
-				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 332425303939199,
-					"parameters": {
-						"layout": "Level 1"
-					}
-				}
-			],
+			"actions": [],
 			"sid": 994430230410744
 		},
 		{
@@ -253,16 +244,7 @@
 					}
 				}
 			],
-			"actions": [
-				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 607520469959317,
-					"parameters": {
-						"layout": "Level 1"
-					}
-				}
-			],
+			"actions": [],
 			"sid": 654971472823207
 		},
 		{

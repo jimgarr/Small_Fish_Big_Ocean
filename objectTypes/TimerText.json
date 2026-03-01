@@ -1,0 +1,10 @@
+{
+	"name": "TimerText",
+	"plugin-id": "Text",
+	"sid": 176559875742796,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": []
+}
