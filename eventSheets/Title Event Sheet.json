@@ -1,0 +1,56 @@
+{
+	"name": "Title Event Sheet",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 654947836461163,
+					"parameters": {
+						"object": "SanDiegoPlayButton"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 801651285724511,
+					"parameters": {
+						"layout": "Map Selection Screen"
+					}
+				}
+			],
+			"sid": 419548091582499
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 127978587672446,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "SanDiegoPlayButton"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 953493511324782,
+					"parameters": {
+						"layout": "Map Selection Screen"
+					}
+				}
+			],
+			"sid": 289245809340281
+		}
+	],
+	"sid": 247589612251367
+}
