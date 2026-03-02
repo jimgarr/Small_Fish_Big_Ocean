@@ -77,7 +77,6 @@
 			"Map",
 			"SettingsButton",
 			"TutorialButton",
-			"Map_Selection_Background",
 			"Water_Background",
 			"Cyprus_background",
 			"Level_1_fish",
@@ -89,7 +88,8 @@
 			"Heart2",
 			"Heart3",
 			"Game_Over_Text",
-			"Win_text"
+			"Win_text",
+			"Map_Selection_Background"
 		],
 		"subfolders": [
 			{

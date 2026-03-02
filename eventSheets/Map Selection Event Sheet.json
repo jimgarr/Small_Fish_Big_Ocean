@@ -5,6 +5,36 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 894956096495384
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 408285487926194,
+					"parameters": {
+						"layer": "\"Layer 1\"",
+						"interactive": false
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "ExitLevelSelection",
+					"sid": 631477437291505,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 650581424993033
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "on-object-clicked",
 					"objectClass": "Mouse",
 					"sid": 659842077885091,
@@ -38,6 +68,24 @@
 					"sid": 382080749205900,
 					"parameters": {
 						"visibility": "visible"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 177210348725791,
+					"parameters": {
+						"seconds": "0.1",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 873208692512958,
+					"parameters": {
+						"layer": "\"Layer 1\"",
+						"interactive": true
 					}
 				}
 			],
@@ -78,6 +126,24 @@
 					"sid": 996304725895788,
 					"parameters": {
 						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 290544062825600,
+					"parameters": {
+						"seconds": "0.1",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 396117093018838,
+					"parameters": {
+						"layer": "\"Layer 1\"",
+						"interactive": true
 					}
 				}
 			],
@@ -211,6 +277,24 @@
 					"parameters": {
 						"visibility": "invisible"
 					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 577270792973961,
+					"parameters": {
+						"seconds": "0.1",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 993730543023734,
+					"parameters": {
+						"layer": "\"Layer 1\"",
+						"interactive": true
+					}
 				}
 			],
 			"sid": 996506763869766
@@ -267,6 +351,15 @@
 					"parameters": {
 						"visibility": "invisible"
 					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 970891042571083,
+					"parameters": {
+						"layer": "\"Layer 1\"",
+						"interactive": false
+					}
 				}
 			],
 			"sid": 915199512574274
@@ -292,6 +385,15 @@
 					"sid": 808164347497995,
 					"parameters": {
 						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 653718637129780,
+					"parameters": {
+						"layer": "\"Layer 1\"",
+						"interactive": false
 					}
 				}
 			],
@@ -335,6 +437,24 @@
 					"parameters": {
 						"visibility": "invisible"
 					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 240589770913152,
+					"parameters": {
+						"seconds": "0.1",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 354536382704836,
+					"parameters": {
+						"layer": "\"Layer 1\"",
+						"interactive": true
+					}
 				}
 			],
 			"sid": 545599381749604
@@ -374,6 +494,24 @@
 					"sid": 834784616840050,
 					"parameters": {
 						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 385617752485464,
+					"parameters": {
+						"seconds": "0.1",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 810880693898945,
+					"parameters": {
+						"layer": "\"Layer 1\"",
+						"interactive": true
 					}
 				}
 			],
@@ -417,6 +555,24 @@
 					"parameters": {
 						"visibility": "invisible"
 					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 503372064762130,
+					"parameters": {
+						"seconds": "0.1",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 683675192707547,
+					"parameters": {
+						"layer": "\"Layer 1\"",
+						"interactive": true
+					}
 				}
 			],
 			"sid": 350277795824715
@@ -456,6 +612,24 @@
 					"sid": 519195291403131,
 					"parameters": {
 						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 766397182598629,
+					"parameters": {
+						"seconds": "0.1",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 406373678564667,
+					"parameters": {
+						"layer": "\"Layer 1\"",
+						"interactive": true
 					}
 				}
 			],
@@ -499,6 +673,24 @@
 					"parameters": {
 						"visibility": "invisible"
 					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 499752701737785,
+					"parameters": {
+						"seconds": "0.1",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 288662261660279,
+					"parameters": {
+						"layer": "\"Layer 1\"",
+						"interactive": true
+					}
 				}
 			],
 			"sid": 191416720152921
@@ -538,6 +730,24 @@
 					"sid": 516304719073324,
 					"parameters": {
 						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 185177994617831,
+					"parameters": {
+						"seconds": "0.1",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 992027386809267,
+					"parameters": {
+						"layer": "\"Layer 1\"",
+						"interactive": true
 					}
 				}
 			],
@@ -581,6 +791,24 @@
 					"parameters": {
 						"visibility": "invisible"
 					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 664536488477046,
+					"parameters": {
+						"seconds": "0.1",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 672785797249567,
+					"parameters": {
+						"layer": "\"Layer 1\"",
+						"interactive": true
+					}
 				}
 			],
 			"sid": 757842372048616
@@ -620,6 +848,24 @@
 					"sid": 486500234943117,
 					"parameters": {
 						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 211769333802204,
+					"parameters": {
+						"seconds": "0.1",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 201731711050372,
+					"parameters": {
+						"layer": "\"Layer 1\"",
+						"interactive": true
 					}
 				}
 			],
