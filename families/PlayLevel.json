@@ -1,0 +1,22 @@
+{
+	"name": "PlayLevel",
+	"plugin-id": "Sprite",
+	"sid": 230349455008146,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"SanDiegoSelector",
+		"SanDiego",
+		"MalawiPlay",
+		"Malawi",
+		"IndonesiaPlay",
+		"Indonesia",
+		"CyprusPlay",
+		"Cyprus",
+		"BrazilPlay",
+		"Brazil",
+		"AustraliaPlay",
+		"Australia"
+	]
+}

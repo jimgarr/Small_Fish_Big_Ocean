@@ -1,0 +1,10 @@
+{
+	"name": "Win_text",
+	"plugin-id": "Text",
+	"sid": 361082053091837,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": []
+}
