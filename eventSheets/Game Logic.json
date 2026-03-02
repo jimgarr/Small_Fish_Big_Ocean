@@ -15,7 +15,7 @@
 			"eventType": "variable",
 			"name": "WaveDuration",
 			"type": "number",
-			"initialValue": "15",
+			"initialValue": "10",
 			"comment": "Amount of time needed to survive the level",
 			"isStatic": false,
 			"isConstant": false,
@@ -50,6 +50,16 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 383314302400372
+		},
+		{
+			"eventType": "variable",
+			"name": "Lives",
+			"type": "number",
+			"initialValue": "3",
+			"comment": "Number of Initial Lives",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 547259699910551
 		},
 		{
 			"eventType": "group",
@@ -313,6 +323,15 @@
 								"variable": "TimeRunning",
 								"value": "false"
 							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Trash",
+							"sid": 100716121208351,
+							"parameters": {
+								"instance-variable": "respawnTimer",
+								"value": "999"
+							}
 						}
 					],
 					"sid": 254392510656222
@@ -367,6 +386,65 @@
 							}
 						},
 						{
+							"id": "set-position",
+							"objectClass": "Trash",
+							"sid": 348192309422455,
+							"parameters": {
+								"x": "-400",
+								"y": "-400"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Trash",
+							"sid": 355128596426886,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Trash",
+							"sid": 101384150374970,
+							"parameters": {
+								"instance-variable": "falling",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Trash",
+							"sid": 100306366210542,
+							"parameters": {
+								"instance-variable": "respawnTimer",
+								"value": "999"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Heart1",
+							"sid": 596591359688541,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Heart2",
+							"sid": 214826046727647,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Heart3",
+							"sid": 294754845331376,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
 							"id": "set-text",
 							"objectClass": "WaveText",
 							"sid": 287162312447069,
@@ -400,11 +478,12 @@
 							}
 						},
 						{
-							"id": "set-visible",
-							"objectClass": "Level_1_fish",
-							"sid": 221035490771721,
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 186844538432834,
 							"parameters": {
-								"visibility": "visible"
+								"variable": "Lives",
+								"value": "3"
 							}
 						},
 						{
@@ -413,6 +492,88 @@
 							"sid": 921896706768500,
 							"parameters": {
 								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Level_1_fish",
+							"sid": 438419934523891,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "Level_1_fish",
+							"sid": 545255547485525,
+							"parameters": {
+								"x": "0420",
+								"y": "312"
+							}
+						},
+						{
+							"id": "set-mirrored",
+							"objectClass": "Level_1_fish",
+							"sid": 689608621910713,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "Trash",
+							"sid": 985179453195320,
+							"parameters": {
+								"y": "random(-750, -50)"
+							}
+						},
+						{
+							"id": "set-x",
+							"objectClass": "Trash",
+							"sid": 305297886926416,
+							"parameters": {
+								"x": "random(0, 850)"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Trash",
+							"sid": 760630937844618,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Trash",
+							"sid": 591570551946066,
+							"parameters": {
+								"instance-variable": "falling",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Heart1",
+							"sid": 846317981980519,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Heart2",
+							"sid": 138690392779709,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Heart3",
+							"sid": 101872977057916,
+							"parameters": {
+								"visibility": "visible"
 							}
 						},
 						{
@@ -466,6 +627,726 @@
 				}
 			],
 			"sid": 329397945556845
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Trash Falling Logic",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 490587117103350
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Trash",
+							"sid": 755782101424204,
+							"parameters": {
+								"instance-variable": "falling"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-y",
+							"objectClass": "Trash",
+							"sid": 577617184365227,
+							"parameters": {
+								"y": "Trash.Y + 1.5 + (1.15 * Wave)"
+							}
+						}
+					],
+					"sid": 355674029239980
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-y",
+							"objectClass": "Trash",
+							"sid": 305499653495158,
+							"parameters": {
+								"comparison": 5,
+								"y-co-ordinate": "500"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Trash",
+							"sid": 740073999990456,
+							"parameters": {
+								"instance-variable": "falling"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Trash",
+							"sid": 116920871842793,
+							"parameters": {
+								"instance-variable": "falling",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Trash",
+							"sid": 478718780686266,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Trash",
+							"sid": 120174750956552,
+							"parameters": {
+								"instance-variable": "respawnTimer",
+								"value": "random(4, 5)"
+							}
+						}
+					],
+					"sid": 675563316195360
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 400271099748659
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Trash",
+							"sid": 495987972038364,
+							"parameters": {
+								"instance-variable": "falling"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Trash",
+							"sid": 739585067186436,
+							"parameters": {
+								"instance-variable": "respawnTimer",
+								"value": "Trash.respawnTimer - 1"
+							}
+						}
+					],
+					"sid": 407874910759649
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Trash",
+							"sid": 198401669073748,
+							"parameters": {
+								"instance-variable": "respawnTimer",
+								"comparison": 3,
+								"value": "0"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Trash",
+							"sid": 825574168659217,
+							"parameters": {
+								"instance-variable": "falling"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "Trash",
+							"sid": 357990647165988,
+							"parameters": {
+								"x": "random(0, 850)"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "Trash",
+							"sid": 237463223941371,
+							"parameters": {
+								"y": "random(-200, -50)"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Trash",
+							"sid": 821549839931544,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Trash",
+							"sid": 667112017625598,
+							"parameters": {
+								"instance-variable": "falling",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 208087702985198
+				}
+			],
+			"sid": 451211367087887
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Trash Interaction",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Trash",
+							"sid": 589356781028622,
+							"parameters": {
+								"object": "Level_1_fish"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Trash",
+							"sid": 578298631565339,
+							"parameters": {
+								"instance-variable": "falling",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Trash",
+							"sid": 766789130797124,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Trash",
+							"sid": 125284199202551,
+							"parameters": {
+								"instance-variable": "respawnTimer",
+								"value": "random(4, 5)"
+							}
+						},
+						{
+							"id": "set-x",
+							"objectClass": "Trash",
+							"sid": 195582572844126,
+							"parameters": {
+								"x": "-500"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "Trash",
+							"sid": 340690380313986,
+							"parameters": {
+								"y": "-500"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Level_1_fish",
+							"sid": 941955467642372,
+							"parameters": {
+								"instance-variable": "hitTimer",
+								"value": "2"
+							}
+						},
+						{
+							"id": "set-max-speed",
+							"objectClass": "Level_1_fish",
+							"sid": 572020848301575,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"max-speed": "Level_1_fish.baseSpeed * 0.4"
+							}
+						},
+						{
+							"id": "set-acceleration",
+							"objectClass": "Level_1_fish",
+							"sid": 775114224499240,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"acceleration": "Level_1_fish.baseAcceleration * 0.4"
+							}
+						},
+						{
+							"id": "set-effect-enabled",
+							"objectClass": "Level_1_fish",
+							"sid": 164180059561480,
+							"parameters": {
+								"mode": "enable",
+								"effect": "\"Tint\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 660225039258904,
+							"parameters": {
+								"variable": "Lives",
+								"value": "Lives - 1"
+							}
+						}
+					],
+					"sid": 573039883589563,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 351247979034231,
+									"parameters": {
+										"variable": "Lives",
+										"comparison": 0,
+										"value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Heart3",
+									"sid": 445216260243745,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 395136217693667
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 413395798858592,
+									"parameters": {
+										"variable": "Lives",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Heart2",
+									"sid": 604390913942362,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 396733302835416
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 792706585358108
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Level_1_fish",
+							"sid": 174127503841568,
+							"parameters": {
+								"instance-variable": "hitTimer",
+								"comparison": 4,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Level_1_fish",
+							"sid": 746750739838440,
+							"parameters": {
+								"instance-variable": "hitTimer",
+								"value": "Level_1_fish.hitTimer - 0.02"
+							}
+						}
+					],
+					"sid": 352228196529478
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Level_1_fish",
+							"sid": 882975763829005,
+							"parameters": {
+								"instance-variable": "hitTimer",
+								"comparison": 3,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Level_1_fish",
+							"sid": 394888143908709,
+							"parameters": {
+								"instance-variable": "hitTimer",
+								"comparison": 4,
+								"value": "-1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-max-speed",
+							"objectClass": "Level_1_fish",
+							"sid": 479753288705455,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"max-speed": "Level_1_fish.baseSpeed"
+							}
+						},
+						{
+							"id": "set-acceleration",
+							"objectClass": "Level_1_fish",
+							"sid": 161068745615956,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"acceleration": "Level_1_fish.baseAcceleration"
+							}
+						},
+						{
+							"id": "set-deceleration",
+							"objectClass": "Level_1_fish",
+							"sid": 751832067274086,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"deceleration": "Level_1_fish.baseDeceleration"
+							}
+						},
+						{
+							"id": "set-effect-enabled",
+							"objectClass": "Level_1_fish",
+							"sid": 314095317215941,
+							"parameters": {
+								"mode": "disable",
+								"effect": "\"Tint\""
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Level_1_fish",
+							"sid": 625143953473927,
+							"parameters": {
+								"instance-variable": "hitTimer",
+								"value": "-1"
+							}
+						}
+					],
+					"sid": 737161648158079
+				}
+			],
+			"sid": 731182488277512
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Game End System",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 637051497642617,
+							"parameters": {
+								"variable": "Lives",
+								"comparison": 3,
+								"value": "0"
+							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "Level_1_fish",
+							"sid": 832521318496778
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Trash",
+							"sid": 556024819252209,
+							"parameters": {
+								"instance-variable": "falling",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-x",
+							"objectClass": "Trash",
+							"sid": 690147707523639,
+							"parameters": {
+								"x": "-400"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "Trash",
+							"sid": 198667632587387,
+							"parameters": {
+								"y": "-400"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Trash",
+							"sid": 108486410697744,
+							"parameters": {
+								"instance-variable": "respawnTimer",
+								"value": "999"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Trash",
+							"sid": 316336778734390,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Level_1_fish",
+							"sid": 798428120645153,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Heart1",
+							"sid": 859240882775542,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Heart2",
+							"sid": 755956081473154,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Heart3",
+							"sid": 476508766668794,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 232192692880453,
+							"parameters": {
+								"variable": "TimeRunning",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "TimerText",
+							"sid": 139244356356985,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Game_Over_Text",
+							"sid": 528202152800053,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 799711016620696
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 443493114618238,
+							"parameters": {
+								"variable": "TimeLeft",
+								"comparison": 3,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 674600713657989,
+							"parameters": {
+								"variable": "Wave",
+								"comparison": 0,
+								"value": "5"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 204378741771491,
+							"parameters": {
+								"variable": "TimeRunning"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Trash",
+							"sid": 170253323337267,
+							"parameters": {
+								"instance-variable": "falling",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-x",
+							"objectClass": "Trash",
+							"sid": 453165655986712,
+							"parameters": {
+								"x": "-400"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "Trash",
+							"sid": 745030388125946,
+							"parameters": {
+								"y": "-400"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Trash",
+							"sid": 252795952655008,
+							"parameters": {
+								"instance-variable": "respawnTimer",
+								"value": "999"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Trash",
+							"sid": 325607307939348,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 687084489328896,
+							"parameters": {
+								"variable": "TimeRunning",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Level_1_fish",
+							"sid": 622252122802389,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Heart1",
+							"sid": 694299060214702,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Heart2",
+							"sid": 335084098790623,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Heart3",
+							"sid": 283808630026362,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "TimerText",
+							"sid": 639381795762744,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Win_text",
+							"sid": 234615276754832,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 843133261353689
+				}
+			],
+			"sid": 590589493721189
 		}
 	],
 	"sid": 986032683225876

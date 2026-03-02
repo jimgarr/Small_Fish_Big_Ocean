@@ -54,6 +54,13 @@
 			"name": "Sine",
 			"author": "Scirra",
 			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "tint",
+			"name": "Tint",
+			"author": "Scirra",
+			"bundled": false
 		}
 	],
 	"uniqueId": "v4v10iw04a5",
@@ -76,7 +83,13 @@
 			"Level_1_fish",
 			"WaveText",
 			"TimerText",
-			"CyprusLevelBackground"
+			"CyprusLevelBackground",
+			"Trash",
+			"Heart1",
+			"Heart2",
+			"Heart3",
+			"Game_Over_Text",
+			"Win_text"
 		],
 		"subfolders": [
 			{

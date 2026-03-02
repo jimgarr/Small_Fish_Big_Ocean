@@ -4,7 +4,36 @@
 	"sid": 978300422247147,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "hitTimer",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 114422403309175
+		},
+		{
+			"name": "baseSpeed",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 128331009243989
+		},
+		{
+			"name": "baseAcceleration",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 855293615079755
+		},
+		{
+			"name": "baseDeceleration",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 296364485856060
+		}
+	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "EightDir",
@@ -12,7 +41,12 @@
 			"sid": 505627545698495
 		}
 	],
-	"effectTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "tint",
+			"name": "Tint"
+		}
+	],
 	"animations": {
 		"items": [
 			{

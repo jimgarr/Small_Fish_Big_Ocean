@@ -1,0 +1,60 @@
+{
+	"name": "Heart3",
+	"plugin-id": "Sprite",
+	"sid": 778730783903080,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 48,
+						"height": 48,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 3018559,
+						"collisionPoly": {
+							"points": [
+								0.3125,
+								0.25,
+								0.75,
+								0.25,
+								0.8125,
+								0.3125,
+								0.8125,
+								0.625,
+								0.5625,
+								0.875,
+								0.5,
+								0.875,
+								0.25,
+								0.625,
+								0.25,
+								0.3125
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 121678919604368,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
