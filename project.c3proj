@@ -89,7 +89,12 @@
 			"Heart3",
 			"Game_Over_Text",
 			"Win_text",
-			"Map_Selection_Background"
+			"Map_Selection_Background",
+			"Star",
+			"End_Game_Screen",
+			"LocationIcon",
+			"ExitButton",
+			"PlayAgainButton"
 		],
 		"subfolders": [
 			{
@@ -139,7 +144,8 @@
 		"items": [
 			"Title",
 			"Map Selection Screen",
-			"Level 1"
+			"Level 1",
+			"End Game"
 		],
 		"subfolders": []
 	},
@@ -147,8 +153,9 @@
 		"items": [
 			"Title Event Sheet",
 			"Map Selection Event Sheet",
-			"Event sheet 1",
-			"Game Logic"
+			"Game Logic",
+			"End Game",
+			"Event sheet 1"
 		],
 		"subfolders": []
 	},

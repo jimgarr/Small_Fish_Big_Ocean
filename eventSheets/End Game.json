@@ -1,0 +1,222 @@
+{
+	"name": "End Game",
+	"events": [
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Star UI",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 638235402248348
+						}
+					],
+					"actions": [],
+					"sid": 728012228646420,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 797945460180247,
+									"parameters": {
+										"object": "Star"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Star",
+									"sid": 342178492751001,
+									"parameters": {
+										"animation": "Star.index <= StarsEarned ? \"on\" : \"off\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 725800686572156
+						}
+					]
+				}
+			],
+			"sid": 169285188046823
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Location ICON UI",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 193423953301612
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "LocationIcon",
+							"sid": 711033988848517,
+							"parameters": {
+								"animation": "\"location\" & CurrentLocationId & (StarsEarned = 5 ? \"_color\" : \"_gray\")",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 694724156442239
+				}
+			],
+			"sid": 927973633758248
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "End Screen Buttons",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 804260332463842,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "ExitButton"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 901595805233340,
+							"parameters": {
+								"layout": "Map Selection Screen"
+							}
+						}
+					],
+					"sid": 521487781823423
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 222178351403674,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "PlayAgainButton"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 936645692469108,
+							"parameters": {
+								"variable": "CurrentLocationId",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 489839297599506,
+							"parameters": {
+								"layout": "Level 1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 890550924878726,
+							"parameters": {
+								"variable": "StarsEarned",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 723242400712706,
+							"parameters": {
+								"variable": "GameEnded",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 336433532506905,
+							"parameters": {
+								"variable": "Lives",
+								"value": "3"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 609985062712248,
+							"parameters": {
+								"variable": "TimeLeft",
+								"value": "WaveDuration"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 854133005901765,
+							"parameters": {
+								"variable": "Wave",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 841735229856153,
+							"parameters": {
+								"variable": "LastWaveShown",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 381234582075566,
+							"parameters": {
+								"variable": "TimeRunning",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 641551828452286
+				}
+			],
+			"sid": 774720829405285
+		}
+	],
+	"sid": 322281228925344
+}
