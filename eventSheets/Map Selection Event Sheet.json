@@ -2,6 +2,16 @@
 	"name": "Map Selection Event Sheet",
 	"events": [
 		{
+			"eventType": "variable",
+			"name": "CurrentLocationId",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "Tracks current location user is on (e.g., Cyprus or San Diego)",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 807132297777197
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -87,6 +97,15 @@
 						"layer": "\"Layer 1\"",
 						"interactive": true
 					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 750251233532256,
+					"parameters": {
+						"variable": "CurrentLocationId",
+						"value": "1"
+					}
 				}
 			],
 			"sid": 989137123723273
@@ -144,6 +163,15 @@
 					"parameters": {
 						"layer": "\"Layer 1\"",
 						"interactive": true
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 184469487120261,
+					"parameters": {
+						"variable": "CurrentLocationId",
+						"value": "1"
 					}
 				}
 			],
@@ -237,6 +265,15 @@
 					"parameters": {
 						"visibility": "visible"
 					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 840808949570932,
+					"parameters": {
+						"variable": "CurrentLocationId",
+						"value": "2"
+					}
 				}
 			],
 			"sid": 860431885937948
@@ -294,6 +331,15 @@
 					"parameters": {
 						"layer": "\"Layer 1\"",
 						"interactive": true
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 579383717393645,
+					"parameters": {
+						"variable": "CurrentLocationId",
+						"value": "2"
 					}
 				}
 			],
@@ -455,6 +501,15 @@
 						"layer": "\"Layer 1\"",
 						"interactive": true
 					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 111019436852613,
+					"parameters": {
+						"variable": "CurrentLocationId",
+						"value": "3"
+					}
 				}
 			],
 			"sid": 545599381749604
@@ -512,6 +567,15 @@
 					"parameters": {
 						"layer": "\"Layer 1\"",
 						"interactive": true
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 342791894941912,
+					"parameters": {
+						"variable": "CurrentLocationId",
+						"value": "3"
 					}
 				}
 			],
@@ -573,6 +637,15 @@
 						"layer": "\"Layer 1\"",
 						"interactive": true
 					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 243493550669417,
+					"parameters": {
+						"variable": "CurrentLocationId",
+						"value": "4"
+					}
 				}
 			],
 			"sid": 350277795824715
@@ -630,6 +703,15 @@
 					"parameters": {
 						"layer": "\"Layer 1\"",
 						"interactive": true
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 261749886520737,
+					"parameters": {
+						"variable": "CurrentLocationId",
+						"value": "4"
 					}
 				}
 			],
@@ -691,6 +773,15 @@
 						"layer": "\"Layer 1\"",
 						"interactive": true
 					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 695863711580620,
+					"parameters": {
+						"variable": "CurrentLocationId",
+						"value": "5"
+					}
 				}
 			],
 			"sid": 191416720152921
@@ -748,6 +839,15 @@
 					"parameters": {
 						"layer": "\"Layer 1\"",
 						"interactive": true
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 668419389633307,
+					"parameters": {
+						"variable": "CurrentLocationId",
+						"value": "5"
 					}
 				}
 			],
@@ -809,6 +909,15 @@
 						"layer": "\"Layer 1\"",
 						"interactive": true
 					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 653576544129878,
+					"parameters": {
+						"variable": "CurrentLocationId",
+						"value": "6"
+					}
 				}
 			],
 			"sid": 757842372048616
@@ -866,6 +975,15 @@
 					"parameters": {
 						"layer": "\"Layer 1\"",
 						"interactive": true
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 589723769475970,
+					"parameters": {
+						"variable": "CurrentLocationId",
+						"value": "6"
 					}
 				}
 			],
