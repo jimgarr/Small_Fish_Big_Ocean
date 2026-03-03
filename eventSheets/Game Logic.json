@@ -656,9 +656,9 @@
 						{
 							"id": "set-y",
 							"objectClass": "Trash",
-							"sid": 577617184365227,
+							"sid": 238788675497559,
 							"parameters": {
-								"y": "Trash.Y + 1.5 + (1.15 * Wave)"
+								"y": "Trash.Y + (1.15 * Wave)"
 							}
 						}
 					],
