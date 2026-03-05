@@ -131,7 +131,10 @@
 					"SanDiegoSelector",
 					"CyprusSelector",
 					"AustraliaSelector",
-					"LevelPlayButton"
+					"LevelPlayButton",
+					"60Diff",
+					"15Diff",
+					"30Diff"
 				],
 				"subfolders": [
 					{

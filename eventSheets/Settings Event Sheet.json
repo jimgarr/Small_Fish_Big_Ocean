@@ -17,7 +17,7 @@
 				{
 					"id": "go-to-layout",
 					"objectClass": "System",
-					"sid": 822641918445583,
+					"sid": 957041609085387,
 					"parameters": {
 						"layout": "Title"
 					}
@@ -50,6 +50,162 @@
 				}
 			],
 			"sid": 856449086386487
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 557494899541011,
+					"parameters": {
+						"object": "15Diff"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 952922075790936,
+					"parameters": {
+						"variable": "WaveDuration",
+						"value": "15"
+					}
+				}
+			],
+			"sid": 922266018628569
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 646286903979126,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "15Diff"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 775340012045245,
+					"parameters": {
+						"variable": "WaveDuration",
+						"value": "15"
+					}
+				}
+			],
+			"sid": 620887934675135
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 627786192390410,
+					"parameters": {
+						"object": "30Diff"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 928834934788127,
+					"parameters": {
+						"variable": "WaveDuration",
+						"value": "30"
+					}
+				}
+			],
+			"sid": 738665743938737
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 194534764865699,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "30Diff"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 106899719548963,
+					"parameters": {
+						"variable": "WaveDuration",
+						"value": "30"
+					}
+				}
+			],
+			"sid": 182335620700868
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 262557117275722,
+					"parameters": {
+						"object": "60Diff"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 422028588739581,
+					"parameters": {
+						"variable": "WaveDuration",
+						"value": "60"
+					}
+				}
+			],
+			"sid": 679053126559743
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 926463665375084,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "60Diff"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 563614384271870,
+					"parameters": {
+						"variable": "WaveDuration",
+						"value": "60"
+					}
+				}
+			],
+			"sid": 929575630046075
 		}
 	],
 	"sid": 118600386053815
