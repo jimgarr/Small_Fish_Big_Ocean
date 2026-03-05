@@ -1,0 +1,56 @@
+{
+	"name": "Settings Event Sheet",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 596228935664943,
+					"parameters": {
+						"object": "BackButton"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 822641918445583,
+					"parameters": {
+						"layout": "Title"
+					}
+				}
+			],
+			"sid": 825719957422009
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 883793177482299,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "BackButton"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 457401291233522,
+					"parameters": {
+						"layout": "Title"
+					}
+				}
+			],
+			"sid": 856449086386487
+		}
+	],
+	"sid": 118600386053815
+}

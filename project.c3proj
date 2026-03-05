@@ -112,7 +112,9 @@
 			"PollutionMeter2",
 			"PollutionMeter3",
 			"PollutionMeter4",
-			"PollutionMeter5"
+			"PollutionMeter5",
+			"SettingsScreen",
+			"BackButton"
 		],
 		"subfolders": [
 			{
@@ -163,7 +165,8 @@
 			"RioSucuriLevel",
 			"TasmanSeaLevel",
 			"LakeMalawiLevel",
-			"CitarumRiverLevel"
+			"CitarumRiverLevel",
+			"Settings"
 		],
 		"subfolders": []
 	},
@@ -173,7 +176,7 @@
 			"Map Selection",
 			"Game Logic",
 			"End Game",
-			"Event sheet 1"
+			"Settings Event Sheet"
 		],
 		"subfolders": []
 	},
