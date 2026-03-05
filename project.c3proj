@@ -107,7 +107,12 @@
 			"TasmanSeaBackground",
 			"LakeMalawiBackground",
 			"CitarumRiverBackground",
-			"PlayButtonPositionDictionary"
+			"PlayButtonPositionDictionary",
+			"PollutionMeter",
+			"PollutionMeter2",
+			"PollutionMeter3",
+			"PollutionMeter4",
+			"PollutionMeter5"
 		],
 		"subfolders": [
 			{
