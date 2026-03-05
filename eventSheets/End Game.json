@@ -105,11 +105,15 @@
 					],
 					"actions": [
 						{
+							"callFunction": "ResetGameState",
+							"sid": 487211495557704
+						},
+						{
 							"id": "go-to-layout",
 							"objectClass": "System",
 							"sid": 901595805233340,
 							"parameters": {
-								"layout": "Map Selection Screen"
+								"layout": "MapSelection"
 							}
 						}
 					],
@@ -141,17 +145,245 @@
 					],
 					"actions": [
 						{
+							"callFunction": "ResetGameState",
+							"sid": 704899152231202
+						},
+						{
 							"id": "go-to-layout",
 							"objectClass": "System",
-							"sid": 489839297599506,
+							"sid": 125142453605661,
 							"parameters": {
-								"layout": "Level 1"
+								"layout": "TijuanaLevel"
+							}
+						}
+					],
+					"sid": 641551828452286
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 423058514347678,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "PlayAgainButton"
 							}
 						},
 						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 921003448164414,
+							"parameters": {
+								"variable": "CurrentLocationId",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "ResetGameState",
+							"sid": 651139275189176
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 170867066055289,
+							"parameters": {
+								"layout": "TasmanSeaLevel"
+							}
+						}
+					],
+					"sid": 226736353618009
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 612349137924076,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "PlayAgainButton"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 393326294365354,
+							"parameters": {
+								"variable": "CurrentLocationId",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "ResetGameState",
+							"sid": 626694070708432
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 661297280389117,
+							"parameters": {
+								"layout": "RioSucuriLevel"
+							}
+						}
+					],
+					"sid": 507305501346104
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 837347767161802,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "PlayAgainButton"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 430978483692326,
+							"parameters": {
+								"variable": "CurrentLocationId",
+								"comparison": 0,
+								"value": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "ResetGameState",
+							"sid": 332173211313911
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 257233346731258,
+							"parameters": {
+								"layout": "NissiBeachLevel"
+							}
+						}
+					],
+					"sid": 326987921880004
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 470350245375850,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "PlayAgainButton"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 493749247492537,
+							"parameters": {
+								"variable": "CurrentLocationId",
+								"comparison": 0,
+								"value": "5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "ResetGameState",
+							"sid": 850967920371741
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 721744004839327,
+							"parameters": {
+								"layout": "CitarumRiverLevel"
+							}
+						}
+					],
+					"sid": 851228367687612
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 421257593551568,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "PlayAgainButton"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 614425175954072,
+							"parameters": {
+								"variable": "CurrentLocationId",
+								"comparison": 0,
+								"value": "6"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "ResetGameState",
+							"sid": 648941579158312
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 576585634016847,
+							"parameters": {
+								"layout": "LakeMalawiLevel"
+							}
+						}
+					],
+					"sid": 229073341474331
+				}
+			],
+			"sid": 774720829405285
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Helper Functions",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"functionName": "ResetGameState",
+					"functionDescription": "Resets gameplay variables when the player replays a level",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 890550924878726,
+							"sid": 144712032032812,
 							"parameters": {
 								"variable": "StarsEarned",
 								"value": "0"
@@ -160,7 +392,7 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 723242400712706,
+							"sid": 993066132192289,
 							"parameters": {
 								"variable": "GameEnded",
 								"value": "0"
@@ -169,7 +401,7 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 336433532506905,
+							"sid": 645357472297458,
 							"parameters": {
 								"variable": "Lives",
 								"value": "3"
@@ -178,7 +410,7 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 609985062712248,
+							"sid": 812205254359633,
 							"parameters": {
 								"variable": "TimeLeft",
 								"value": "WaveDuration"
@@ -187,7 +419,7 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 854133005901765,
+							"sid": 665745983770445,
 							"parameters": {
 								"variable": "Wave",
 								"value": "1"
@@ -196,7 +428,7 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 841735229856153,
+							"sid": 296014425575353,
 							"parameters": {
 								"variable": "LastWaveShown",
 								"value": "0"
@@ -205,17 +437,197 @@
 						{
 							"id": "set-boolean-eventvar",
 							"objectClass": "System",
-							"sid": 381234582075566,
+							"sid": 873652308717082,
 							"parameters": {
 								"variable": "TimeRunning",
 								"value": "false"
 							}
 						}
 					],
-					"sid": 641551828452286
+					"sid": 591126303811245
 				}
 			],
-			"sid": 774720829405285
+			"sid": 996785961341410
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 370150968996932,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "PlayAgainButton"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "ResetGameState",
+					"sid": 417191335023653
+				}
+			],
+			"sid": 702761715155647,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 938919210203508,
+							"parameters": {
+								"variable": "CurrentLocationId",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 818432483346535,
+							"parameters": {
+								"layout": "TijuanaLevel"
+							}
+						}
+					],
+					"sid": 593644545349524
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 734900647996618,
+							"parameters": {
+								"variable": "CurrentLocationId",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 371408556511969,
+							"parameters": {
+								"layout": "TasmanSeaLevel"
+							}
+						}
+					],
+					"sid": 438677874962555
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 636513250663163,
+							"parameters": {
+								"variable": "CurrentLocationId",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 378740160592277,
+							"parameters": {
+								"layout": "RioSucuriLevel"
+							}
+						}
+					],
+					"sid": 294333969359842
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 592376637553698,
+							"parameters": {
+								"variable": "CurrentLocationId",
+								"comparison": 0,
+								"value": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 203458321968026,
+							"parameters": {
+								"layout": "NissiBeachLevel"
+							}
+						}
+					],
+					"sid": 894938455201377
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 687353567738781,
+							"parameters": {
+								"variable": "CurrentLocationId",
+								"comparison": 0,
+								"value": "5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 433947467447668,
+							"parameters": {
+								"layout": "CitarumRiverLevel"
+							}
+						}
+					],
+					"sid": 676564062774288
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 145215819740856,
+							"parameters": {
+								"variable": "CurrentLocationId",
+								"comparison": 0,
+								"value": "6"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 235564375648797,
+							"parameters": {
+								"layout": "LakeMalawiLevel"
+							}
+						}
+					],
+					"sid": 470179661180157
+				}
+			]
 		}
 	],
 	"sid": 322281228925344

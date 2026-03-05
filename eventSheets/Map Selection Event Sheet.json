@@ -74,7 +74,7 @@
 				},
 				{
 					"id": "set-visible",
-					"objectClass": "SanDiegoPlayButton",
+					"objectClass": "LevelPlayButton",
 					"sid": 382080749205900,
 					"parameters": {
 						"visibility": "visible"
@@ -125,7 +125,7 @@
 			"actions": [
 				{
 					"id": "set-visible",
-					"objectClass": "SanDiegoPlayButton",
+					"objectClass": "LevelPlayButton",
 					"sid": 581713144247600,
 					"parameters": {
 						"visibility": "visible"
@@ -183,56 +183,6 @@
 				{
 					"id": "on-object-clicked",
 					"objectClass": "Mouse",
-					"sid": 596659705372596,
-					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "SanDiegoPlayButton"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 710909811128990,
-					"parameters": {
-						"layout": "Level 1"
-					}
-				}
-			],
-			"sid": 389731729399395
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-tap-object",
-					"objectClass": "Touch",
-					"sid": 228429141229655,
-					"parameters": {
-						"object": "SanDiegoPlayButton"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 808413332142480,
-					"parameters": {
-						"layout": "Level 1"
-					}
-				}
-			],
-			"sid": 168110175808924
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
 					"sid": 434168308482003,
 					"parameters": {
 						"mouse-button": "left",
@@ -256,14 +206,6 @@
 					"sid": 269130405482418,
 					"parameters": {
 						"visibility": "invisible"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "AustraliaPlay",
-					"sid": 348641202757153,
-					"parameters": {
-						"visibility": "visible"
 					}
 				},
 				{
@@ -295,14 +237,6 @@
 					"id": "set-visible",
 					"objectClass": "Australia",
 					"sid": 200082256900831,
-					"parameters": {
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "AustraliaPlay",
-					"sid": 879041831520393,
 					"parameters": {
 						"visibility": "visible"
 					}
@@ -344,38 +278,6 @@
 				}
 			],
 			"sid": 996506763869766
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 954135551599251,
-					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "AustraliaPlay"
-					}
-				}
-			],
-			"actions": [],
-			"sid": 994430230410744
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-tap-object",
-					"objectClass": "Touch",
-					"sid": 178597141530642,
-					"parameters": {
-						"object": "AustraliaPlay"
-					}
-				}
-			],
-			"actions": [],
-			"sid": 654971472823207
 		},
 		{
 			"eventType": "block",
@@ -470,14 +372,6 @@
 				},
 				{
 					"id": "set-visible",
-					"objectClass": "BrazilPlay",
-					"sid": 824271521301412,
-					"parameters": {
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "set-visible",
 					"objectClass": "BrazilSelector",
 					"sid": 349858727519277,
 					"parameters": {
@@ -531,14 +425,6 @@
 					"id": "set-visible",
 					"objectClass": "Brazil",
 					"sid": 892811256293248,
-					"parameters": {
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "BrazilPlay",
-					"sid": 794750883864338,
 					"parameters": {
 						"visibility": "visible"
 					}
@@ -606,14 +492,6 @@
 				},
 				{
 					"id": "set-visible",
-					"objectClass": "CyprusPlay",
-					"sid": 324631696469212,
-					"parameters": {
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "set-visible",
 					"objectClass": "CyprusSelector",
 					"sid": 117959529189075,
 					"parameters": {
@@ -667,14 +545,6 @@
 					"id": "set-visible",
 					"objectClass": "Cyprus",
 					"sid": 838877715777589,
-					"parameters": {
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "CyprusPlay",
-					"sid": 830913399136379,
 					"parameters": {
 						"visibility": "visible"
 					}
@@ -742,14 +612,6 @@
 				},
 				{
 					"id": "set-visible",
-					"objectClass": "IndonesiaPlay",
-					"sid": 527339769530557,
-					"parameters": {
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "set-visible",
 					"objectClass": "IndonesiaSelector",
 					"sid": 950512147269574,
 					"parameters": {
@@ -803,14 +665,6 @@
 					"id": "set-visible",
 					"objectClass": "Indonesia",
 					"sid": 691658003271996,
-					"parameters": {
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "IndonesiaPlay",
-					"sid": 321799638049162,
 					"parameters": {
 						"visibility": "visible"
 					}
@@ -878,14 +732,6 @@
 				},
 				{
 					"id": "set-visible",
-					"objectClass": "MalawiPlay",
-					"sid": 397076850077420,
-					"parameters": {
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "set-visible",
 					"objectClass": "MalawiSelector",
 					"sid": 842534426311451,
 					"parameters": {
@@ -945,14 +791,6 @@
 				},
 				{
 					"id": "set-visible",
-					"objectClass": "MalawiPlay",
-					"sid": 448147797313582,
-					"parameters": {
-						"visibility": "visible"
-					}
-				},
-				{
-					"id": "set-visible",
 					"objectClass": "MalawiSelector",
 					"sid": 486500234943117,
 					"parameters": {
@@ -988,6 +826,179 @@
 				}
 			],
 			"sid": 173060491929437
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 248400115334468,
+					"parameters": {
+						"object": "LevelPlayButton"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 356323805053344,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 889880961362510,
+							"parameters": {
+								"variable": "CurrentLocationId",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 182300768580024,
+							"parameters": {
+								"layout": "TijuanaLevel"
+							}
+						}
+					],
+					"sid": 465809237343426
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 135520237174065,
+							"parameters": {
+								"variable": "CurrentLocationId",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 618869076162011,
+							"parameters": {
+								"layout": "TasmanSeaLevel"
+							}
+						}
+					],
+					"sid": 227093531959945
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 223355822761513,
+							"parameters": {
+								"variable": "CurrentLocationId",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 353598191277463,
+							"parameters": {
+								"layout": "RioSucuriLevel"
+							}
+						}
+					],
+					"sid": 210032715056291
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 730554025795987,
+							"parameters": {
+								"variable": "CurrentLocationId",
+								"comparison": 0,
+								"value": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 311133624920096,
+							"parameters": {
+								"layout": "NissiBeachLevel"
+							}
+						}
+					],
+					"sid": 653931040275894
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 205609701109460,
+							"parameters": {
+								"variable": "CurrentLocationId",
+								"comparison": 0,
+								"value": "5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 230149365043047,
+							"parameters": {
+								"layout": "CitarumRiverLevel"
+							}
+						}
+					],
+					"sid": 434470426399795
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 441624206929885,
+							"parameters": {
+								"variable": "CurrentLocationId",
+								"comparison": 0,
+								"value": "6"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 501482357614312,
+							"parameters": {
+								"layout": "LakeMalawiLevel"
+							}
+						}
+					],
+					"sid": 198418393891165
+				}
+			]
 		}
 	],
 	"sid": 849681844193133

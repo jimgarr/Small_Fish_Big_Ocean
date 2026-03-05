@@ -1,7 +1,7 @@
 {
-	"name": "SanDiegoPlayButton",
+	"name": "TasmanSeaBackground",
 	"plugin-id": "Sprite",
-	"sid": 465481499348102,
+	"sid": 511310892796685,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
@@ -12,21 +12,21 @@
 			{
 				"frames": [
 					{
-						"width": 250,
-						"height": 250,
+						"width": 859,
+						"height": 481,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 1447686,
+						"imageSpriteId": 6811858,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 952282720685630,
+				"sid": 157740427986964,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

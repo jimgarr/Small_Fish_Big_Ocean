@@ -1260,7 +1260,7 @@
 							"objectClass": "System",
 							"sid": 710621914738071,
 							"parameters": {
-								"layout": "End Game"
+								"layout": "EndGame"
 							}
 						}
 					],
@@ -1431,7 +1431,7 @@
 							"objectClass": "System",
 							"sid": 552658988016162,
 							"parameters": {
-								"layout": "End Game"
+								"layout": "EndGame"
 							}
 						}
 					],
