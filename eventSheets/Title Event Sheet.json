@@ -9,7 +9,7 @@
 					"objectClass": "Touch",
 					"sid": 654947836461163,
 					"parameters": {
-						"object": "SanDiegoPlayButton"
+						"object": "LevelPlayButton"
 					}
 				}
 			],
@@ -19,7 +19,7 @@
 					"objectClass": "System",
 					"sid": 801651285724511,
 					"parameters": {
-						"layout": "Map Selection Screen"
+						"layout": "MapSelection"
 					}
 				}
 			],
@@ -35,7 +35,7 @@
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked",
-						"object-clicked": "SanDiegoPlayButton"
+						"object-clicked": "LevelPlayButton"
 					}
 				}
 			],
@@ -45,7 +45,7 @@
 					"objectClass": "System",
 					"sid": 953493511324782,
 					"parameters": {
-						"layout": "Map Selection Screen"
+						"layout": "MapSelection"
 					}
 				}
 			],

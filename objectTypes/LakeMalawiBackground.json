@@ -1,7 +1,7 @@
 {
-	"name": "CyprusPlay",
+	"name": "LakeMalawiBackground",
 	"plugin-id": "Sprite",
-	"sid": 423571483962206,
+	"sid": 956476737645997,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
@@ -12,21 +12,33 @@
 			{
 				"frames": [
 					{
-						"width": 250,
-						"height": 250,
+						"width": 1427,
+						"height": 979,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 4649355,
+						"imageSpriteId": 4438520,
+						"collisionPoly": {
+							"points": [
+								1,
+								0.0040858018386108275,
+								1,
+								0.9989785495403473,
+								0,
+								0.9989785495403473,
+								0,
+								0.005107252298263534
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 942434915200359,
+				"sid": 519511193469444,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

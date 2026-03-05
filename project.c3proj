@@ -8,6 +8,13 @@
 	"usedAddons": [
 		{
 			"type": "plugin",
+			"id": "Dictionary",
+			"name": "Dictionary",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Keyboard",
 			"name": "Keyboard",
 			"author": "Scirra",
@@ -94,7 +101,13 @@
 			"End_Game_Screen",
 			"LocationIcon",
 			"ExitButton",
-			"PlayAgainButton"
+			"PlayAgainButton",
+			"TijuanaLevelBackground",
+			"RioSucuriBackground",
+			"TasmanSeaBackground",
+			"LakeMalawiBackground",
+			"CitarumRiverBackground",
+			"PlayButtonPositionDictionary"
 		],
 		"subfolders": [
 			{
@@ -111,12 +124,7 @@
 					"SanDiegoSelector",
 					"CyprusSelector",
 					"AustraliaSelector",
-					"SanDiegoPlayButton",
-					"AustraliaPlay",
-					"BrazilPlay",
-					"CyprusPlay",
-					"IndonesiaPlay",
-					"MalawiPlay"
+					"LevelPlayButton"
 				],
 				"subfolders": [
 					{
@@ -143,16 +151,21 @@
 	"layouts": {
 		"items": [
 			"Title",
-			"Map Selection Screen",
-			"Level 1",
-			"End Game"
+			"MapSelection",
+			"NissiBeachLevel",
+			"EndGame",
+			"TijuanaLevel",
+			"RioSucuriLevel",
+			"TasmanSeaLevel",
+			"LakeMalawiLevel",
+			"CitarumRiverLevel"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
 			"Title Event Sheet",
-			"Map Selection Event Sheet",
+			"Map Selection",
 			"Game Logic",
 			"End Game",
 			"Event sheet 1"

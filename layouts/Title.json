@@ -309,7 +309,7 @@
 					}
 				},
 				{
-					"type": "SanDiegoPlayButton",
+					"type": "LevelPlayButton",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -381,7 +381,16 @@
 		"subfolders": []
 	},
 	"sid": 142745675177151,
-	"nonworld-instances": [],
+	"nonworld-instances": [
+		{
+			"type": "PlayButtonPositionDictionary",
+			"properties": {},
+			"uid": 34,
+			"sid": 807485987236374,
+			"tags": "",
+			"instanceVariables": {}
+		}
+	],
 	"effectTypes": [],
 	"width": 854,
 	"height": 480,

@@ -1,7 +1,7 @@
 {
-	"name": "MalawiPlay",
+	"name": "LevelPlayButton",
 	"plugin-id": "Sprite",
-	"sid": 349066413933161,
+	"sid": 465481499348102,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
@@ -20,13 +20,13 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 4795047,
+						"imageSpriteId": 1447686,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 995520072183772,
+				"sid": 952282720685630,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

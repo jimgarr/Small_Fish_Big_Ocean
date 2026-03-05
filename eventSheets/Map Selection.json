@@ -1,0 +1,819 @@
+{
+	"name": "Map Selection",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "CurrentLocationId",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "Tracks current location user is on (e.g., Cyprus or San Diego)",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 807132297777197
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Map Select Logic",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 683650371041207
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 119036717803792,
+							"parameters": {
+								"layer": "\"Layer 1\"",
+								"interactive": false
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "ExitLevelSelection",
+							"sid": 785023237650547,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 422068202731298
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 589302235875946,
+							"parameters": {
+								"object": "SanDiegoSelector"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "LevelPlayButton",
+							"sid": 694242429988490,
+							"parameters": {
+								"x": "PlayButtonPositionDictionary.Get(\"1x\")",
+								"y": "PlayButtonPositionDictionary.Get(\"1y\")"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "SanDiego",
+							"sid": 784377077101921,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "LevelPlayButton",
+							"sid": 117013811716993,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "SanDiegoSelector",
+							"sid": 215243315152841,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 499222552844489,
+							"parameters": {
+								"seconds": "0.1",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 241445438898473,
+							"parameters": {
+								"layer": "\"Layer 1\"",
+								"interactive": true
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 757063599699974,
+							"parameters": {
+								"variable": "CurrentLocationId",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 523775679107544
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 440814288396336,
+							"parameters": {
+								"object": "AustraliaSelector"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "LevelPlayButton",
+							"sid": 923497110687190,
+							"parameters": {
+								"x": "PlayButtonPositionDictionary.Get(\"2x\")",
+								"y": "PlayButtonPositionDictionary.Get(\"2y\")"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Australia",
+							"sid": 392086479870349,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "AustraliaSelector",
+							"sid": 201532749385158,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 222557882920715,
+							"parameters": {
+								"seconds": "0.1",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 151938080012247,
+							"parameters": {
+								"layer": "\"Layer 1\"",
+								"interactive": true
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 139505098852205,
+							"parameters": {
+								"variable": "CurrentLocationId",
+								"value": "2"
+							}
+						}
+					],
+					"sid": 925371795716441
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 776195395103875,
+							"parameters": {
+								"object": "ExitLevelSelection"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "PlayLevel",
+							"sid": 746599483969495,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 186400013900282,
+							"parameters": {
+								"layer": "\"Layer 1\"",
+								"interactive": false
+							}
+						}
+					],
+					"sid": 983888219616414
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 818802017178583,
+							"parameters": {
+								"object": "BrazilSelector"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "LevelPlayButton",
+							"sid": 715030622283795,
+							"parameters": {
+								"x": "PlayButtonPositionDictionary.Get(\"3x\")",
+								"y": "PlayButtonPositionDictionary.Get(\"3y\")"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Brazil",
+							"sid": 595514438353736,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "BrazilSelector",
+							"sid": 293643281111157,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 412223192276893,
+							"parameters": {
+								"seconds": "0.1",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 938662138953953,
+							"parameters": {
+								"layer": "\"Layer 1\"",
+								"interactive": true
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 687369666378946,
+							"parameters": {
+								"variable": "CurrentLocationId",
+								"value": "3"
+							}
+						}
+					],
+					"sid": 273242440743438
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 514966610609700,
+							"parameters": {
+								"object": "CyprusSelector"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "LevelPlayButton",
+							"sid": 244622864318622,
+							"parameters": {
+								"x": "PlayButtonPositionDictionary.Get(\"4x\")",
+								"y": "PlayButtonPositionDictionary.Get(\"4y\")"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Cyprus",
+							"sid": 526298610594188,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "CyprusSelector",
+							"sid": 989584373808630,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 138583354432472,
+							"parameters": {
+								"seconds": "0.1",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 650322697449093,
+							"parameters": {
+								"layer": "\"Layer 1\"",
+								"interactive": true
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 610929403396266,
+							"parameters": {
+								"variable": "CurrentLocationId",
+								"value": "4"
+							}
+						}
+					],
+					"sid": 186758936336082
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 193564899305084,
+							"parameters": {
+								"object": "IndonesiaSelector"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "LevelPlayButton",
+							"sid": 566029919649352,
+							"parameters": {
+								"x": "PlayButtonPositionDictionary.Get(\"5x\")",
+								"y": "PlayButtonPositionDictionary.Get(\"5y\")"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Indonesia",
+							"sid": 860346067057367,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "IndonesiaSelector",
+							"sid": 876754271715316,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 939458350767582,
+							"parameters": {
+								"seconds": "0.1",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 679221663451435,
+							"parameters": {
+								"layer": "\"Layer 1\"",
+								"interactive": true
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 766175123847021,
+							"parameters": {
+								"variable": "CurrentLocationId",
+								"value": "5"
+							}
+						}
+					],
+					"sid": 847393976329603
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 177824845772333,
+							"parameters": {
+								"object": "MalawiSelector"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "LevelPlayButton",
+							"sid": 524600784807495,
+							"parameters": {
+								"x": "PlayButtonPositionDictionary.Get(\"6x\")",
+								"y": "PlayButtonPositionDictionary.Get(\"6y\")"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Malawi",
+							"sid": 137763362181445,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "MalawiSelector",
+							"sid": 832476982830626,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 257060406485454,
+							"parameters": {
+								"seconds": "0.1",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 523861778063082,
+							"parameters": {
+								"layer": "\"Layer 1\"",
+								"interactive": true
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 958569863845484,
+							"parameters": {
+								"variable": "CurrentLocationId",
+								"value": "6"
+							}
+						}
+					],
+					"sid": 453317063851255
+				}
+			],
+			"sid": 477619312959045
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Redirection Logic",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 977231503915399,
+							"parameters": {
+								"object": "LevelPlayButton"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 163172029550930,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 945897179666406,
+									"parameters": {
+										"variable": "CurrentLocationId",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 587712373024822,
+									"parameters": {
+										"layout": "TijuanaLevel"
+									}
+								}
+							],
+							"sid": 864764647187246
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 206144756637225,
+									"parameters": {
+										"variable": "CurrentLocationId",
+										"comparison": 0,
+										"value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 292552080707197,
+									"parameters": {
+										"layout": "TasmanSeaLevel"
+									}
+								}
+							],
+							"sid": 986039380329380
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 583280174351652,
+									"parameters": {
+										"variable": "CurrentLocationId",
+										"comparison": 0,
+										"value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 722303505121890,
+									"parameters": {
+										"layout": "RioSucuriLevel"
+									}
+								}
+							],
+							"sid": 920262655398068
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 452146994638670,
+									"parameters": {
+										"variable": "CurrentLocationId",
+										"comparison": 0,
+										"value": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 244471051425594,
+									"parameters": {
+										"layout": "NissiBeachLevel"
+									}
+								}
+							],
+							"sid": 257417225144168
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 924284217787238,
+									"parameters": {
+										"variable": "CurrentLocationId",
+										"comparison": 0,
+										"value": "5"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 189771004506818,
+									"parameters": {
+										"layout": "CitarumRiverLevel"
+									}
+								}
+							],
+							"sid": 342534012054084
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 652197061322826,
+									"parameters": {
+										"variable": "CurrentLocationId",
+										"comparison": 0,
+										"value": "6"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 219626234663642,
+									"parameters": {
+										"layout": "LakeMalawiLevel"
+									}
+								}
+							],
+							"sid": 899134962315656
+						}
+					]
+				}
+			],
+			"sid": 831804303012980
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Populate LevelButton Positions",
+			"description": "The x number in front of the x and y represent the location. For example, 1x and 1y represent the location of the \"play\" button the tijuana educational popup",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 797663512539462
+						}
+					],
+					"actions": [
+						{
+							"id": "add-key",
+							"objectClass": "PlayButtonPositionDictionary",
+							"sid": 989037035448849,
+							"parameters": {
+								"key": "\"1x\"",
+								"value": "461.958788"
+							}
+						},
+						{
+							"id": "add-key",
+							"objectClass": "PlayButtonPositionDictionary",
+							"sid": 614008625682651,
+							"parameters": {
+								"key": "\"1y\"",
+								"value": "340.78588\n"
+							}
+						},
+						{
+							"id": "add-key",
+							"objectClass": "PlayButtonPositionDictionary",
+							"sid": 456522561843516,
+							"parameters": {
+								"key": "\"2x\"",
+								"value": "546.600797"
+							}
+						},
+						{
+							"id": "add-key",
+							"objectClass": "PlayButtonPositionDictionary",
+							"sid": 545980552571612,
+							"parameters": {
+								"key": "\"2y\"",
+								"value": "316.765625"
+							}
+						},
+						{
+							"id": "add-key",
+							"objectClass": "PlayButtonPositionDictionary",
+							"sid": 980456458356662,
+							"parameters": {
+								"key": "\"3x\"",
+								"value": "539"
+							}
+						},
+						{
+							"id": "add-key",
+							"objectClass": "PlayButtonPositionDictionary",
+							"sid": 465140201456971,
+							"parameters": {
+								"key": "\"3y\"",
+								"value": "349"
+							}
+						},
+						{
+							"id": "add-key",
+							"objectClass": "PlayButtonPositionDictionary",
+							"sid": 276632505125354,
+							"parameters": {
+								"key": "\"4x\"",
+								"value": "437"
+							}
+						},
+						{
+							"id": "add-key",
+							"objectClass": "PlayButtonPositionDictionary",
+							"sid": 500672583658451,
+							"parameters": {
+								"key": "\"4y\"",
+								"value": "342"
+							}
+						},
+						{
+							"id": "add-key",
+							"objectClass": "PlayButtonPositionDictionary",
+							"sid": 596025696029261,
+							"parameters": {
+								"key": "\"5x\"",
+								"value": "517"
+							}
+						},
+						{
+							"id": "add-key",
+							"objectClass": "PlayButtonPositionDictionary",
+							"sid": 361254640709285,
+							"parameters": {
+								"key": "\"5y\"",
+								"value": "332"
+							}
+						},
+						{
+							"id": "add-key",
+							"objectClass": "PlayButtonPositionDictionary",
+							"sid": 818685492904478,
+							"parameters": {
+								"key": "\"6x\"",
+								"value": "438"
+							}
+						},
+						{
+							"id": "add-key",
+							"objectClass": "PlayButtonPositionDictionary",
+							"sid": 283216749149334,
+							"parameters": {
+								"key": "\"6y\"",
+								"value": "320"
+							}
+						}
+					],
+					"sid": 587800673691821
+				}
+			],
+			"sid": 503711308030724
+		}
+	],
+	"sid": 849681844193133
+}

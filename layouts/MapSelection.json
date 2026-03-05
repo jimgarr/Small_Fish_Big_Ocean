@@ -1,5 +1,5 @@
 {
-	"name": "Map Selection Screen",
+	"name": "MapSelection",
 	"layers": [
 		{
 			"name": "Background",
@@ -78,43 +78,6 @@
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [
-				{
-					"type": "LevelPlayButton",
-					"properties": {
-						"initially-visible": false,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 24,
-					"sid": 536392889403943,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 536392889403943,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 461.9587884092647,
-						"y": 340.7858802913871,
-						"width": 96.3435309287625,
-						"height": 25.333980893744894,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							0
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
 				{
 					"type": "SanDiego",
 					"properties": {
@@ -739,7 +702,44 @@
 							1
 						],
 						"angle": 0,
-						"zElevation": 10
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "LevelPlayButton",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 24,
+					"sid": 536392889403943,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 536392889403943,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 438,
+						"y": 320,
+						"width": 96.3435309287625,
+						"height": 25.333980893744894,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							0
+						],
+						"angle": 0,
+						"zElevation": 0
 					}
 				}
 			],
@@ -786,5 +786,5 @@
 	"vpX": 0.5,
 	"vpY": 0.5,
 	"projection": "perspective",
-	"eventSheet": "Map Selection Event Sheet"
+	"eventSheet": "Map Selection"
 }

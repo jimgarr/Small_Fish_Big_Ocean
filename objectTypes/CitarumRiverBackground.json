@@ -1,7 +1,7 @@
 {
-	"name": "IndonesiaPlay",
+	"name": "CitarumRiverBackground",
 	"plugin-id": "Sprite",
-	"sid": 811878461450150,
+	"sid": 509400367769190,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
@@ -12,21 +12,21 @@
 			{
 				"frames": [
 					{
-						"width": 250,
-						"height": 250,
+						"width": 859,
+						"height": 481,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 6053601,
+						"imageSpriteId": 8741911,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 311673363062843,
+				"sid": 159347643883796,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
