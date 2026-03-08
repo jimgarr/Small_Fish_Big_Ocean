@@ -1439,6 +1439,30 @@
 				}
 			],
 			"sid": 590589493721189
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 155860608575795,
+					"parameters": {
+						"key": 27
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 347560120676944,
+					"parameters": {
+						"layout": "Title"
+					}
+				}
+			],
+			"sid": 874710093576608
 		}
 	],
 	"sid": 986032683225876

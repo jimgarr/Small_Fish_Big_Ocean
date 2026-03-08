@@ -193,13 +193,7 @@
 		"items": [
 			"Title",
 			"MapSelection",
-			"NissiBeachLevel",
 			"EndGame",
-			"TijuanaLevel",
-			"RioSucuriLevel",
-			"TasmanSeaLevel",
-			"LakeMalawiLevel",
-			"CitarumRiverLevel",
 			"Tutorial"
 		],
 		"subfolders": [
@@ -220,6 +214,18 @@
 				],
 				"subfolders": [],
 				"name": "Pop Up Layouts"
+			},
+			{
+				"items": [
+					"TijuanaLevel",
+					"RioSucuriLevel",
+					"TasmanSeaLevel",
+					"LakeMalawiLevel",
+					"CitarumRiverLevel",
+					"NissiBeachLevel"
+				],
+				"subfolders": [],
+				"name": "Level Layouts"
 			}
 		]
 	},

@@ -151,9 +151,9 @@
 						{
 							"id": "go-to-layout",
 							"objectClass": "System",
-							"sid": 125142453605661,
+							"sid": 247691585578181,
 							"parameters": {
-								"layout": "TijuanaLevel"
+								"layout": "TijuanaAfter Pop Up"
 							}
 						}
 					],
@@ -191,9 +191,9 @@
 						{
 							"id": "go-to-layout",
 							"objectClass": "System",
-							"sid": 170867066055289,
+							"sid": 674644310819261,
 							"parameters": {
-								"layout": "TasmanSeaLevel"
+								"layout": "TasmanSeaAfterPopUp"
 							}
 						}
 					],
@@ -231,9 +231,9 @@
 						{
 							"id": "go-to-layout",
 							"objectClass": "System",
-							"sid": 661297280389117,
+							"sid": 389666216522127,
 							"parameters": {
-								"layout": "RioSucuriLevel"
+								"layout": "RioSucuriAfterPopUp"
 							}
 						}
 					],
@@ -271,9 +271,9 @@
 						{
 							"id": "go-to-layout",
 							"objectClass": "System",
-							"sid": 257233346731258,
+							"sid": 344874067345262,
 							"parameters": {
-								"layout": "NissiBeachLevel"
+								"layout": "CyprusAfterPopUp"
 							}
 						}
 					],
@@ -311,9 +311,9 @@
 						{
 							"id": "go-to-layout",
 							"objectClass": "System",
-							"sid": 721744004839327,
+							"sid": 903888877141943,
 							"parameters": {
-								"layout": "CitarumRiverLevel"
+								"layout": "Citarum River After Pop Up"
 							}
 						}
 					],
@@ -351,9 +351,9 @@
 						{
 							"id": "go-to-layout",
 							"objectClass": "System",
-							"sid": 576585634016847,
+							"sid": 653895465696155,
 							"parameters": {
-								"layout": "LakeMalawiLevel"
+								"layout": "LakeMalawiAfterPopUp"
 							}
 						}
 					],
