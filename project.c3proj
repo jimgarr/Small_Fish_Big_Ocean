@@ -29,6 +29,13 @@
 		},
 		{
 			"type": "plugin",
+			"id": "SVGPicture",
+			"name": "SVG Picture",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Sprite",
 			"name": "Sprite",
 			"author": "Scirra",
@@ -113,8 +120,19 @@
 			"PollutionMeter3",
 			"PollutionMeter4",
 			"PollutionMeter5",
-			"SettingsScreen",
-			"BackButton"
+			"Tutorial",
+			"TutorialPage",
+			"fishtutorial2",
+			"tut",
+			"fishtutorialreal",
+			"Frame",
+			"rightarrowtutorial",
+			"leftarrowtutorial",
+			"uparrowtutorial",
+			"downarrowtutorial",
+			"bag",
+			"ClipPathGroup",
+			"Group"
 		],
 		"subfolders": [
 			{
@@ -131,10 +149,7 @@
 					"SanDiegoSelector",
 					"CyprusSelector",
 					"AustraliaSelector",
-					"LevelPlayButton",
-					"60Diff",
-					"15Diff",
-					"30Diff"
+					"LevelPlayButton"
 				],
 				"subfolders": [
 					{
@@ -169,7 +184,7 @@
 			"TasmanSeaLevel",
 			"LakeMalawiLevel",
 			"CitarumRiverLevel",
-			"Settings"
+			"Tutorial"
 		],
 		"subfolders": []
 	},
@@ -179,7 +194,7 @@
 			"Map Selection",
 			"Game Logic",
 			"End Game",
-			"Settings Event Sheet"
+			"Tutorial-Logic"
 		],
 		"subfolders": []
 	},
@@ -280,6 +295,14 @@
 					"name": "Brazil.svg",
 					"type": "image/svg+xml",
 					"sid": 492766416174207,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "left-arrow-tutorial.svg",
+					"type": "image/svg+xml",
+					"sid": 262268192568902,
 					"file-info": {
 						"purpose": "none"
 					}

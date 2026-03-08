@@ -1,0 +1,322 @@
+{
+	"name": "Tutorial-Logic",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "MoveDir",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 335048769390612
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 494076232835515
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 918721528741498,
+					"parameters": {
+						"variable": "MoveDir",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-x",
+					"objectClass": "fishtutorial2",
+					"sid": 861205764425895,
+					"parameters": {
+						"x": "fishtutorialreal.X +3"
+					}
+				},
+				{
+					"id": "set-mirrored",
+					"objectClass": "fishtutorialreal",
+					"sid": 471136400168258,
+					"parameters": {
+						"state": "not-mirrored"
+					}
+				}
+			],
+			"sid": 244862118595825
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 607741078674459
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 232628438430226,
+					"parameters": {
+						"variable": "MoveDir",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-x",
+					"objectClass": "fishtutorial2",
+					"sid": 853167252587644,
+					"parameters": {
+						"x": "fishtutorialreal.X -3"
+					}
+				},
+				{
+					"id": "set-mirrored",
+					"objectClass": "fishtutorialreal",
+					"sid": 337792438853196,
+					"parameters": {
+						"state": "mirrored"
+					}
+				}
+			],
+			"sid": 110912488347922
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 939164381194574,
+					"parameters": {
+						"interval-seconds": "1.0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 117557289703694,
+					"parameters": {
+						"variable": "MoveDir",
+						"value": "1 - MoveDir"
+					}
+				}
+			],
+			"sid": 929761199509129
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 111248015115327,
+					"parameters": {
+						"interval-seconds": "0.2"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 396300140296513,
+					"parameters": {
+						"variable": "MoveDir",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-scale",
+					"objectClass": "rightarrowtutorial",
+					"sid": 856118969481610,
+					"parameters": {
+						"scale": "1.2"
+					}
+				},
+				{
+					"id": "set-scale",
+					"objectClass": "Frame",
+					"sid": 570439107421229,
+					"parameters": {
+						"scale": "1"
+					}
+				}
+			],
+			"sid": 282041460202688
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 946173198966658,
+					"parameters": {
+						"interval-seconds": "0.2"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 974538803941104,
+					"parameters": {
+						"variable": "MoveDir",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-scale",
+					"objectClass": "Frame",
+					"sid": 969632162852587,
+					"parameters": {
+						"scale": "1.2"
+					}
+				},
+				{
+					"id": "set-scale",
+					"objectClass": "rightarrowtutorial",
+					"sid": 404838302094766,
+					"parameters": {
+						"scale": "1"
+					}
+				}
+			],
+			"sid": 599055706596636
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 617007164642506,
+					"parameters": {
+						"interval-seconds": "0.35"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-scale",
+					"objectClass": "Frame",
+					"sid": 636549399769443,
+					"parameters": {
+						"scale": "1"
+					}
+				},
+				{
+					"id": "set-scale",
+					"objectClass": "rightarrowtutorial",
+					"sid": 569636151024585,
+					"parameters": {
+						"scale": "1"
+					}
+				}
+			],
+			"sid": 906660048650209
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 939415707269670
+				}
+			],
+			"actions": [
+				{
+					"id": "set-y",
+					"objectClass": "ClipPathGroup",
+					"sid": 730235923531684,
+					"parameters": {
+						"y": "ClipPathGroup.Y +0.5"
+					}
+				}
+			],
+			"sid": 624989358245021
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 569091477461559
+				}
+			],
+			"actions": [
+				{
+					"id": "set-y",
+					"objectClass": "bag",
+					"sid": 496592011187003,
+					"parameters": {
+						"y": "bag.Y +0.5"
+					}
+				}
+			],
+			"sid": 127857341651592
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 111353291148754
+				}
+			],
+			"actions": [
+				{
+					"id": "set-y",
+					"objectClass": "Group",
+					"sid": 646200505417170,
+					"parameters": {
+						"y": "Group.Y +0.5"
+					}
+				}
+			],
+			"sid": 586045438217677
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 630078199176583,
+					"parameters": {
+						"key": 27
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 402909028920907,
+					"parameters": {
+						"layout": "Title"
+					}
+				}
+			],
+			"sid": 391460904527160
+		}
+	],
+	"sid": 483077984750016
+}

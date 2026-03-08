@@ -1,7 +1,7 @@
 {
-	"name": "Map_Selection_Background",
+	"name": "Group",
 	"plugin-id": "Sprite",
-	"sid": 648905799122605,
+	"sid": 334413354046063,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
@@ -12,22 +12,22 @@
 			{
 				"frames": [
 					{
-						"width": 900,
-						"height": 480,
+						"width": 58,
+						"height": 66,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 8189099,
+						"imageSpriteId": 2411622,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 699885674194392,
-				"name": "Animation 1",
+				"sid": 491031101474480,
+				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

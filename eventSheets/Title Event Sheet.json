@@ -57,9 +57,9 @@
 				{
 					"id": "on-tap-object",
 					"objectClass": "Touch",
-					"sid": 996852249294123,
+					"sid": 892248407430915,
 					"parameters": {
-						"object": "SettingsButton"
+						"object": "TutorialButton"
 					}
 				}
 			],
@@ -67,13 +67,13 @@
 				{
 					"id": "go-to-layout",
 					"objectClass": "System",
-					"sid": 985551890096893,
+					"sid": 705816111120004,
 					"parameters": {
-						"layout": "Settings"
+						"layout": "Tutorial"
 					}
 				}
 			],
-			"sid": 493314011825654
+			"sid": 985025659575613
 		},
 		{
 			"eventType": "block",
@@ -81,11 +81,11 @@
 				{
 					"id": "on-object-clicked",
 					"objectClass": "Mouse",
-					"sid": 282464670232638,
+					"sid": 309737178289659,
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked",
-						"object-clicked": "SettingsButton"
+						"object-clicked": "TutorialButton"
 					}
 				}
 			],
@@ -93,13 +93,13 @@
 				{
 					"id": "go-to-layout",
 					"objectClass": "System",
-					"sid": 761547760728102,
+					"sid": 135814640178437,
 					"parameters": {
-						"layout": "Settings"
+						"layout": "Tutorial"
 					}
 				}
 			],
-			"sid": 475572186358481
+			"sid": 171665863661791
 		}
 	],
 	"sid": 247589612251367
