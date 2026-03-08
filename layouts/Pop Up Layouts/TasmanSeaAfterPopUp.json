@@ -1,5 +1,5 @@
 {
-	"name": "TasmanSeaBeforePopUp",
+	"name": "TasmanSeaAfterPopUp",
 	"layers": [
 		{
 			"name": "Layer 0",
@@ -7,7 +7,7 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "PopupScreenTS2",
+					"type": "PopupScreenTS",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -15,22 +15,22 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 161,
-					"sid": 156136377548515,
+					"uid": 160,
+					"sid": 567450684160959,
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
 					"instanceFolderItem": {
-						"sid": 156136377548515,
+						"sid": 567450684160959,
 						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 431.5,
-						"y": 247,
-						"width": 854,
-						"height": 483,
+						"x": 428.5,
+						"y": 243,
+						"width": 852,
+						"height": 485,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -44,7 +44,7 @@
 					}
 				}
 			],
-			"sid": 228449903938923,
+			"sid": 981154692860773,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
@@ -78,7 +78,7 @@
 		"items": [],
 		"subfolders": []
 	},
-	"sid": 280135393518324,
+	"sid": 902442526863211,
 	"nonworld-instances": [],
 	"effectTypes": [],
 	"width": 854,
@@ -87,5 +87,5 @@
 	"vpX": 0.5,
 	"vpY": 0.5,
 	"projection": "perspective",
-	"eventSheet": null
+	"eventSheet": "Rio - Pop Up Logic"
 }

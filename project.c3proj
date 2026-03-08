@@ -143,7 +143,12 @@
 			"PopupScreenTS2",
 			"PopupScreenLM",
 			"PopupScreenLM2",
-			"PopupScreenLakeM"
+			"PopupScreenLakeM",
+			"PopupScreenTR",
+			"PopupScreenTijR",
+			"PopupScreenTR2",
+			"PopupScreenCR",
+			"PopupScreenCR2"
 		],
 		"subfolders": [
 			{
@@ -195,17 +200,28 @@
 			"TasmanSeaLevel",
 			"LakeMalawiLevel",
 			"CitarumRiverLevel",
-			"Tutorial",
-			"CyprusBeforePopUp",
-			"CyprusAfterPopUp",
-			"RioSucuriAfterPopUp",
-			"RioSucuriBeforePopUp",
-			"TasmanSeaAfterPopUp",
-			"TasmanSeaBeforePopUp",
-			"LakeMalawiBeforePopUp",
-			"LakeMalawiAfterPopUp"
+			"Tutorial"
 		],
-		"subfolders": []
+		"subfolders": [
+			{
+				"items": [
+					"CyprusBeforePopUp",
+					"CyprusAfterPopUp",
+					"RioSucuriAfterPopUp",
+					"RioSucuriBeforePopUp",
+					"TasmanSeaAfterPopUp",
+					"TasmanSeaBeforePopUp",
+					"LakeMalawiBeforePopUp",
+					"LakeMalawiAfterPopUp",
+					"Tijuana River Before Pop Up",
+					"TijuanaAfter Pop Up",
+					"Citarum River Before Pop Up",
+					"Citarum River After Pop Up"
+				],
+				"subfolders": [],
+				"name": "Pop Up Layouts"
+			}
+		]
 	},
 	"eventSheets": {
 		"items": [
@@ -215,7 +231,20 @@
 			"End Game",
 			"Tutorial-Logic"
 		],
-		"subfolders": []
+		"subfolders": [
+			{
+				"items": [
+					"Cyprus Pop Up Logic",
+					"Lake Malawi Pop Up Logic",
+					"Tasman Sea Pop Up Logic",
+					"Rio - Pop Up Logic",
+					"Tijuana Pop Up Logic",
+					"Citarum River Pop Up Logic"
+				],
+				"subfolders": [],
+				"name": "Pop Up Event Sheets"
+			}
+		]
 	},
 	"rootFileFolders": {
 		"script": {

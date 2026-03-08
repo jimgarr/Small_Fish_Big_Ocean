@@ -1,0 +1,36 @@
+{
+	"name": "Tijuana Pop Up Logic",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 570282370006801
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 467360306527136,
+					"parameters": {
+						"seconds": "3.0",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 247864196785243,
+					"parameters": {
+						"layout": "TijuanaLevel"
+					}
+				}
+			],
+			"sid": 306196293394964
+		}
+	],
+	"sid": 348079447006050
+}

@@ -1,5 +1,5 @@
 {
-	"name": "CyprusBeforePopUp",
+	"name": "CyprusAfterPopUp",
 	"layers": [
 		{
 			"name": "Layer 0",
@@ -7,7 +7,7 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "PopupScreen",
+					"type": "PopupScreen2",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -15,22 +15,22 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 156,
-					"sid": 533040892596383,
+					"uid": 157,
+					"sid": 634254127014446,
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
 					"instanceFolderItem": {
-						"sid": 533040892596383,
+						"sid": 634254127014446,
 						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 431,
-						"y": 243.5,
-						"width": 854,
-						"height": 480,
+						"x": 428.5,
+						"y": 241,
+						"width": 860,
+						"height": 485,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -44,7 +44,7 @@
 					}
 				}
 			],
-			"sid": 362838485100073,
+			"sid": 207717218792396,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
@@ -78,7 +78,7 @@
 		"items": [],
 		"subfolders": []
 	},
-	"sid": 277529274864483,
+	"sid": 853383320286958,
 	"nonworld-instances": [],
 	"effectTypes": [],
 	"width": 854,
@@ -87,5 +87,5 @@
 	"vpX": 0.5,
 	"vpY": 0.5,
 	"projection": "perspective",
-	"eventSheet": null
+	"eventSheet": "Rio - Pop Up Logic"
 }

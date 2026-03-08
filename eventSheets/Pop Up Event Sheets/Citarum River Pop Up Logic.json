@@ -1,0 +1,36 @@
+{
+	"name": "Citarum River Pop Up Logic",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 361578029132990
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 606090334596385,
+					"parameters": {
+						"seconds": "3.0",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 179969520803683,
+					"parameters": {
+						"layout": "CitarumRiverLevel"
+					}
+				}
+			],
+			"sid": 735281850915018
+		}
+	],
+	"sid": 228815137762088
+}

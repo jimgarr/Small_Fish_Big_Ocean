@@ -1,5 +1,5 @@
 {
-	"name": "LakeMalawiAfterPopUp",
+	"name": "TijuanaAfter Pop Up",
 	"layers": [
 		{
 			"name": "Layer 0",
@@ -7,7 +7,7 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "PopupScreenLakeM",
+					"type": "PopupScreenTijR",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -15,22 +15,22 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 163,
-					"sid": 866524205000671,
+					"uid": 165,
+					"sid": 773369004049733,
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
 					"instanceFolderItem": {
-						"sid": 866524205000671,
+						"sid": 773369004049733,
 						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 428.5,
-						"y": 245,
-						"width": 854,
-						"height": 481,
+						"x": 427,
+						"y": 240,
+						"width": 855,
+						"height": 479,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -44,7 +44,7 @@
 					}
 				}
 			],
-			"sid": 228638950995254,
+			"sid": 335012218453657,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
@@ -78,7 +78,7 @@
 		"items": [],
 		"subfolders": []
 	},
-	"sid": 657862621493586,
+	"sid": 392645058423430,
 	"nonworld-instances": [],
 	"effectTypes": [],
 	"width": 854,

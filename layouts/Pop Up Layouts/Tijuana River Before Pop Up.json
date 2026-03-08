@@ -1,5 +1,5 @@
 {
-	"name": "CyprusAfterPopUp",
+	"name": "Tijuana River Before Pop Up",
 	"layers": [
 		{
 			"name": "Layer 0",
@@ -7,7 +7,7 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "PopupScreen2",
+					"type": "PopupScreenTR2",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -15,22 +15,22 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 157,
-					"sid": 634254127014446,
+					"uid": 164,
+					"sid": 253210031700691,
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
 					"instanceFolderItem": {
-						"sid": 634254127014446,
+						"sid": 253210031700691,
 						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 428.5,
+						"x": 429.5,
 						"y": 241,
-						"width": 860,
-						"height": 485,
+						"width": 854,
+						"height": 481,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -44,7 +44,7 @@
 					}
 				}
 			],
-			"sid": 207717218792396,
+			"sid": 490745446808561,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
@@ -78,7 +78,7 @@
 		"items": [],
 		"subfolders": []
 	},
-	"sid": 853383320286958,
+	"sid": 233672937151658,
 	"nonworld-instances": [],
 	"effectTypes": [],
 	"width": 854,
@@ -87,5 +87,5 @@
 	"vpX": 0.5,
 	"vpY": 0.5,
 	"projection": "perspective",
-	"eventSheet": null
+	"eventSheet": "Tijuana Pop Up Logic"
 }

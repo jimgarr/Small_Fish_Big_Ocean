@@ -1,0 +1,36 @@
+{
+	"name": "Rio - Pop Up Logic",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 251773897579039
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 742834875729299,
+					"parameters": {
+						"seconds": "3.0",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 878157591628568,
+					"parameters": {
+						"layout": "RioSucuriLevel"
+					}
+				}
+			],
+			"sid": 895503887217706
+		}
+	],
+	"sid": 867324585218744
+}
