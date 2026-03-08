@@ -132,7 +132,18 @@
 			"downarrowtutorial",
 			"bag",
 			"ClipPathGroup",
-			"Group"
+			"Group",
+			"framecyprus",
+			"PopupScreen",
+			"popupcyprusafter",
+			"PopupScreen2",
+			"PopupScreenRS",
+			"PopupScreenRS2",
+			"PopupScreenTS",
+			"PopupScreenTS2",
+			"PopupScreenLM",
+			"PopupScreenLM2",
+			"PopupScreenLakeM"
 		],
 		"subfolders": [
 			{
@@ -184,7 +195,15 @@
 			"TasmanSeaLevel",
 			"LakeMalawiLevel",
 			"CitarumRiverLevel",
-			"Tutorial"
+			"Tutorial",
+			"CyprusBeforePopUp",
+			"CyprusAfterPopUp",
+			"RioSucuriAfterPopUp",
+			"RioSucuriBeforePopUp",
+			"TasmanSeaAfterPopUp",
+			"TasmanSeaBeforePopUp",
+			"LakeMalawiBeforePopUp",
+			"LakeMalawiAfterPopUp"
 		],
 		"subfolders": []
 	},
