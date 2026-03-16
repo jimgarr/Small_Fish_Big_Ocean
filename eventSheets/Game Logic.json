@@ -217,30 +217,30 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "is-in-touch",
-							"objectClass": "Touch",
-							"sid": 546504679951387
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 961319430361693
 						}
 					],
 					"actions": [
 						{
 							"id": "set-x",
 							"objectClass": "Level_1_fish",
-							"sid": 391765196677079,
+							"sid": 684010285851796,
 							"parameters": {
-								"x": "Touch.X"
+								"x": "clamp(Level_1_fish.X, 40, 810)"
 							}
 						},
 						{
 							"id": "set-y",
 							"objectClass": "Level_1_fish",
-							"sid": 829060114948782,
+							"sid": 869457896219094,
 							"parameters": {
-								"y": "Touch.Y"
+								"y": "clamp(Level_1_fish.Y, 40, 460)"
 							}
 						}
 					],
-					"sid": 885649434790361
+					"sid": 227261558516928
 				},
 				{
 					"eventType": "block",
