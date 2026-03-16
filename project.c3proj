@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 46602,
+	"savedWithRelease": 47600,
 	"name": "New project",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -382,6 +382,10 @@
 		],
 		"subfolders": []
 	},
+	"models3d": {
+		"items": [],
+		"subfolders": []
+	},
 	"properties": {
 		"description": "",
 		"version": "1.0.0.0",
@@ -421,6 +425,7 @@
 		"multitexturing": "auto",
 		"gpuPreference": "high-performance",
 		"framerateMode": "vsync",
+		"fixedFramerate": 30,
 		"sampling": "trilinear",
 		"downscaling": "medium",
 		"renderingMode": "auto",
