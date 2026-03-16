@@ -18,6 +18,34 @@
 			"desc": "",
 			"show": true,
 			"sid": 545672962516671
+		},
+		{
+			"name": "moveType",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 796460664165525
+		},
+		{
+			"name": "xSpeed",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 953058447963177
+		},
+		{
+			"name": "driftSpeed",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 231500181000482
+		},
+		{
+			"name": "waveOffset",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 679995120331397
 		}
 	],
 	"behaviorTypes": [],

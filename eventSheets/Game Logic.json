@@ -651,187 +651,6 @@
 		{
 			"eventType": "group",
 			"disabled": false,
-			"title": "Trash Falling Logic",
-			"description": "",
-			"isActiveOnStart": true,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "every-tick",
-							"objectClass": "System",
-							"sid": 490587117103350
-						},
-						{
-							"id": "is-boolean-instance-variable-set",
-							"objectClass": "Trash",
-							"sid": 755782101424204,
-							"parameters": {
-								"instance-variable": "falling"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-y",
-							"objectClass": "Trash",
-							"sid": 238788675497559,
-							"parameters": {
-								"y": "Trash.Y + (1.15 * Wave)"
-							}
-						}
-					],
-					"sid": 355674029239980
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-y",
-							"objectClass": "Trash",
-							"sid": 305499653495158,
-							"parameters": {
-								"comparison": 5,
-								"y-co-ordinate": "500"
-							}
-						},
-						{
-							"id": "is-boolean-instance-variable-set",
-							"objectClass": "Trash",
-							"sid": 740073999990456,
-							"parameters": {
-								"instance-variable": "falling"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-instvar",
-							"objectClass": "Trash",
-							"sid": 116920871842793,
-							"parameters": {
-								"instance-variable": "falling",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "Trash",
-							"sid": 478718780686266,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "Trash",
-							"sid": 120174750956552,
-							"parameters": {
-								"instance-variable": "respawnTimer",
-								"value": "random(4, 5)"
-							}
-						}
-					],
-					"sid": 675563316195360
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "every-tick",
-							"objectClass": "System",
-							"sid": 400271099748659
-						},
-						{
-							"id": "is-boolean-instance-variable-set",
-							"objectClass": "Trash",
-							"sid": 495987972038364,
-							"parameters": {
-								"instance-variable": "falling"
-							},
-							"isInverted": true
-						}
-					],
-					"actions": [
-						{
-							"id": "set-instvar-value",
-							"objectClass": "Trash",
-							"sid": 739585067186436,
-							"parameters": {
-								"instance-variable": "respawnTimer",
-								"value": "Trash.respawnTimer - 1"
-							}
-						}
-					],
-					"sid": 407874910759649
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-instance-variable",
-							"objectClass": "Trash",
-							"sid": 198401669073748,
-							"parameters": {
-								"instance-variable": "respawnTimer",
-								"comparison": 3,
-								"value": "0"
-							}
-						},
-						{
-							"id": "is-boolean-instance-variable-set",
-							"objectClass": "Trash",
-							"sid": 825574168659217,
-							"parameters": {
-								"instance-variable": "falling"
-							},
-							"isInverted": true
-						}
-					],
-					"actions": [
-						{
-							"id": "set-x",
-							"objectClass": "Trash",
-							"sid": 357990647165988,
-							"parameters": {
-								"x": "random(0, 850)"
-							}
-						},
-						{
-							"id": "set-y",
-							"objectClass": "Trash",
-							"sid": 237463223941371,
-							"parameters": {
-								"y": "random(-200, -50)"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "Trash",
-							"sid": 821549839931544,
-							"parameters": {
-								"visibility": "visible"
-							}
-						},
-						{
-							"id": "set-boolean-instvar",
-							"objectClass": "Trash",
-							"sid": 667112017625598,
-							"parameters": {
-								"instance-variable": "falling",
-								"value": "true"
-							}
-						}
-					],
-					"sid": 208087702985198
-				}
-			],
-			"sid": 451211367087887
-		},
-		{
-			"eventType": "group",
-			"disabled": false,
 			"title": "Trash Interaction",
 			"description": "",
 			"isActiveOnStart": true,
@@ -1463,6 +1282,362 @@
 				}
 			],
 			"sid": 874710093576608
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "New Trash Falling logic",
+			"description": "moveType (0-4):\n0 - straight fall\n1 - diagonal drift\n2 - wave/zig zag\n3 - heavy fast drop",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 595624411614617
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Trash",
+							"sid": 131480473859642,
+							"parameters": {
+								"instance-variable": "falling"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 930484652206752,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Trash",
+									"sid": 703433349974574,
+									"parameters": {
+										"instance-variable": "moveType",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-y",
+									"objectClass": "Trash",
+									"sid": 105053149782794,
+									"parameters": {
+										"y": "Trash.Y + (1.15 * Wave)"
+									}
+								}
+							],
+							"sid": 833994738885845
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Trash",
+									"sid": 362542244409523,
+									"parameters": {
+										"instance-variable": "moveType",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-y",
+									"objectClass": "Trash",
+									"sid": 318068292685707,
+									"parameters": {
+										"y": "Trash.Y + (1.10 * Wave)"
+									}
+								},
+								{
+									"id": "set-x",
+									"objectClass": "Trash",
+									"sid": 159764219974407,
+									"parameters": {
+										"x": "Trash.X + Trash.xSpeed"
+									}
+								}
+							],
+							"sid": 996548018711243
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Trash",
+									"sid": 245806520481891,
+									"parameters": {
+										"instance-variable": "moveType",
+										"comparison": 0,
+										"value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-y",
+									"objectClass": "Trash",
+									"sid": 309672553568488,
+									"parameters": {
+										"y": "Trash.Y + (1.00 * Wave)"
+									}
+								},
+								{
+									"id": "set-x",
+									"objectClass": "Trash",
+									"sid": 440404210382301,
+									"parameters": {
+										"x": "Trash.X + sin(time*4 + Trash.waveOffset) * Trash.driftSpeed"
+									}
+								}
+							],
+							"sid": 351428731661813
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Trash",
+									"sid": 258937280557033,
+									"parameters": {
+										"instance-variable": "moveType",
+										"comparison": 0,
+										"value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-y",
+									"objectClass": "Trash",
+									"sid": 537781859260940,
+									"parameters": {
+										"y": "Trash.Y + (1.6 * Wave)"
+									}
+								}
+							],
+							"sid": 112778430482417
+						}
+					]
+				}
+			],
+			"sid": 966789009371291
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Reset/respawn system",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-y",
+							"objectClass": "Trash",
+							"sid": 127063353584655,
+							"parameters": {
+								"comparison": 5,
+								"y-co-ordinate": "500"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Trash",
+							"sid": 429334303949350,
+							"parameters": {
+								"instance-variable": "falling"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Trash",
+							"sid": 845002085589146,
+							"parameters": {
+								"instance-variable": "falling",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Trash",
+							"sid": 693794654991515,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Trash",
+							"sid": 400545632420040,
+							"parameters": {
+								"instance-variable": "respawnTimer",
+								"value": "random(0.6, 1.3)"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "Trash",
+							"sid": 987004668292082,
+							"parameters": {
+								"y": "-500"
+							}
+						},
+						{
+							"id": "set-x",
+							"objectClass": "Trash",
+							"sid": 525886315925733,
+							"parameters": {
+								"x": "-500"
+							}
+						}
+					],
+					"sid": 890721658721839
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 417502164763378
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Trash",
+							"sid": 742463244116690,
+							"parameters": {
+								"instance-variable": "falling"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Trash",
+							"sid": 616897427410125,
+							"parameters": {
+								"instance-variable": "respawnTimer",
+								"value": "Trash.respawnTimer - dt"
+							}
+						}
+					],
+					"sid": 540860033610128
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Trash",
+							"sid": 202544106905931,
+							"parameters": {
+								"instance-variable": "respawnTimer",
+								"comparison": 3,
+								"value": "0"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Trash",
+							"sid": 512492997883626,
+							"parameters": {
+								"instance-variable": "falling"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "Trash",
+							"sid": 974640444113452,
+							"parameters": {
+								"x": "random(0,850)"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "Trash",
+							"sid": 234378270831883,
+							"parameters": {
+								"y": "random(-200,-50)"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Trash",
+							"sid": 859384704797795,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Trash",
+							"sid": 560011531180600,
+							"parameters": {
+								"instance-variable": "falling",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Trash",
+							"sid": 958573849230975,
+							"parameters": {
+								"instance-variable": "moveType",
+								"value": "choose(0,1,2,3)"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Trash",
+							"sid": 654580366614626,
+							"parameters": {
+								"instance-variable": "xSpeed",
+								"value": "random(-1.5, 1.5)"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Trash",
+							"sid": 395227359470192,
+							"parameters": {
+								"instance-variable": "driftSpeed",
+								"value": "random(1,3)"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Trash",
+							"sid": 881448100056636,
+							"parameters": {
+								"instance-variable": "waveOffset",
+								"value": "random(0,360)"
+							}
+						}
+					],
+					"sid": 851992843597576
+				}
+			],
+			"sid": 288475062086675
 		}
 	],
 	"sid": 986032683225876
