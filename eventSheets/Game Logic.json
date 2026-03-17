@@ -23,6 +23,16 @@
 		},
 		{
 			"eventType": "variable",
+			"name": "FoodCollected",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "tracks how many food items the player has eaten toward the next heart",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 472663557827202
+		},
+		{
+			"eventType": "variable",
 			"name": "TimeLeft",
 			"type": "number",
 			"initialValue": "0",
@@ -189,6 +199,15 @@
 							"parameters": {
 								"variable": "Wave",
 								"value": "Wave + 1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 210494033572849,
+							"parameters": {
+								"variable": "FoodCollected",
+								"value": "0"
 							}
 						},
 						{
@@ -406,6 +425,32 @@
 							}
 						},
 						{
+							"id": "set-visible",
+							"objectClass": "Food",
+							"sid": 394613039696055,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Food",
+							"sid": 784213043358164,
+							"parameters": {
+								"instance-variable": "falling",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "Food",
+							"sid": 304793421373677,
+							"parameters": {
+								"x": "-400",
+								"y": "-400"
+							}
+						},
+						{
 							"id": "set-position",
 							"objectClass": "Trash",
 							"sid": 348192309422455,
@@ -489,21 +534,21 @@
 							}
 						},
 						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 950976214533428,
+							"parameters": {
+								"variable": "Lives",
+								"value": "3"
+							}
+						},
+						{
 							"id": "wait",
 							"objectClass": "System",
 							"sid": 701529191010835,
 							"parameters": {
 								"seconds": "2.0",
 								"use-timescale": true
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 186844538432834,
-							"parameters": {
-								"variable": "Lives",
-								"value": "3"
 							}
 						},
 						{
@@ -1260,33 +1305,9 @@
 			"sid": 590589493721189
 		},
 		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "key-is-down",
-					"objectClass": "Keyboard",
-					"sid": 155860608575795,
-					"parameters": {
-						"key": 27
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 347560120676944,
-					"parameters": {
-						"layout": "Title"
-					}
-				}
-			],
-			"sid": 874710093576608
-		},
-		{
 			"eventType": "group",
 			"disabled": false,
-			"title": "New Trash Falling logic",
+			"title": "Trash Falling logic",
 			"description": "moveType (0-4):\n0 - straight fall\n1 - diagonal drift\n2 - wave/zig zag\n3 - heavy fast drop",
 			"isActiveOnStart": true,
 			"children": [
@@ -1438,7 +1459,7 @@
 		{
 			"eventType": "group",
 			"disabled": false,
-			"title": "Reset/respawn system",
+			"title": "Trash Reset/respawn system",
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
@@ -1638,6 +1659,564 @@
 				}
 			],
 			"sid": 288475062086675
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 411844609266469,
+					"parameters": {
+						"key": 27
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 877210167318783,
+					"parameters": {
+						"layout": "Title"
+					}
+				}
+			],
+			"sid": 928484595204790
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Food Falling logic",
+			"description": "moveType (0-4):\n0 - straight gentle fall\n1 -  soft diagonal fall\n2 - floaty wave motion",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 154520135067482
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 500513964289732,
+							"parameters": {
+								"variable": "TimeRunning"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Food",
+							"sid": 826871074748937,
+							"parameters": {
+								"instance-variable": "falling"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 156351207580861,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Food",
+									"sid": 321558821888512,
+									"parameters": {
+										"instance-variable": "moveType",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-y",
+									"objectClass": "Food",
+									"sid": 981281687205882,
+									"parameters": {
+										"y": "Food.Y + (0.8 * Wave)"
+									}
+								}
+							],
+							"sid": 125537047979012
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Food",
+									"sid": 510822080908093,
+									"parameters": {
+										"instance-variable": "moveType",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-y",
+									"objectClass": "Food",
+									"sid": 124109223400361,
+									"parameters": {
+										"y": "Food.Y + (0.75 * Wave)"
+									}
+								},
+								{
+									"id": "set-x",
+									"objectClass": "Food",
+									"sid": 257990112492765,
+									"parameters": {
+										"x": "Food.X +Food.xSpeed"
+									}
+								}
+							],
+							"sid": 917957920645725
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Food",
+									"sid": 773868210600466,
+									"parameters": {
+										"instance-variable": "moveType",
+										"comparison": 0,
+										"value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-y",
+									"objectClass": "Food",
+									"sid": 779695529217809,
+									"parameters": {
+										"y": "Food.Y + (0.7 * Wave)"
+									}
+								},
+								{
+									"id": "set-x",
+									"objectClass": "Food",
+									"sid": 330194899500953,
+									"parameters": {
+										"x": "Food.X + sin(time*3 +Food.waveOffset) *Food.driftSpeed"
+									}
+								}
+							],
+							"sid": 480294586749304
+						}
+					]
+				}
+			],
+			"sid": 497405466075555
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Food Reset/respawn system",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-y",
+							"objectClass": "Food",
+							"sid": 595658306864741,
+							"parameters": {
+								"comparison": 5,
+								"y-co-ordinate": "500"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Food",
+							"sid": 678656707333335,
+							"parameters": {
+								"instance-variable": "falling"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Food",
+							"sid": 233951175966945,
+							"parameters": {
+								"instance-variable": "falling",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Food",
+							"sid": 248657246706012,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Food",
+							"sid": 803138942443103,
+							"parameters": {
+								"instance-variable": "respawnTimer",
+								"value": "random(1.2, 2.0)"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "Food",
+							"sid": 978389377414840,
+							"parameters": {
+								"y": "-500"
+							}
+						},
+						{
+							"id": "set-x",
+							"objectClass": "Food",
+							"sid": 441532077300503,
+							"parameters": {
+								"x": "-500"
+							}
+						}
+					],
+					"sid": 392332327165662
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 397891224942968
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Food",
+							"sid": 913810463620571,
+							"parameters": {
+								"instance-variable": "falling"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Food",
+							"sid": 826615899786617,
+							"parameters": {
+								"instance-variable": "respawnTimer",
+								"value": "Food.respawnTimer - dt"
+							}
+						}
+					],
+					"sid": 203032953012345
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Food",
+							"sid": 497772127945405,
+							"parameters": {
+								"instance-variable": "respawnTimer",
+								"comparison": 3,
+								"value": "0"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Food",
+							"sid": 289523345322868,
+							"parameters": {
+								"instance-variable": "falling"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "Food",
+							"sid": 329323825578667,
+							"parameters": {
+								"x": "random(0,850)"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "Food",
+							"sid": 717379845422348,
+							"parameters": {
+								"y": "random(-200,-50)"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Food",
+							"sid": 103339586080012,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Food",
+							"sid": 305794333487508,
+							"parameters": {
+								"instance-variable": "falling",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Food",
+							"sid": 290283267920181,
+							"parameters": {
+								"instance-variable": "moveType",
+								"value": "choose(0,1,2)"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Food",
+							"sid": 920561415047667,
+							"parameters": {
+								"instance-variable": "xSpeed",
+								"value": "random(-1, 1)"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Food",
+							"sid": 885212996343308,
+							"parameters": {
+								"instance-variable": "driftSpeed",
+								"value": "random(0.5,2)"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Food",
+							"sid": 956409666468335,
+							"parameters": {
+								"instance-variable": "waveOffset",
+								"value": "random(0,360)"
+							}
+						}
+					],
+					"sid": 254370270493172
+				}
+			],
+			"sid": 326804450049627
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Food interaction",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Food",
+							"sid": 379547996130354,
+							"parameters": {
+								"object": "Level_1_fish"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Food",
+							"sid": 876586649752801,
+							"parameters": {
+								"instance-variable": "falling",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Food",
+							"sid": 343455901264693,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Food",
+							"sid": 275476631161239,
+							"parameters": {
+								"instance-variable": "respawnTimer",
+								"value": "random(1.2, 2.0)"
+							}
+						},
+						{
+							"id": "set-x",
+							"objectClass": "Food",
+							"sid": 453650311900351,
+							"parameters": {
+								"x": "-500"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "Food",
+							"sid": 591805204176874,
+							"parameters": {
+								"y": "-500"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 847839226273973,
+							"parameters": {
+								"variable": "FoodCollected",
+								"value": "FoodCollected + 1"
+							}
+						}
+					],
+					"sid": 612564960530164
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 375679138493055,
+							"parameters": {
+								"variable": "FoodCollected",
+								"comparison": 5,
+								"value": "3"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 211602747474241,
+							"parameters": {
+								"variable": "Lives",
+								"comparison": 2,
+								"value": "3"
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 574499491999964
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 799821472158673,
+							"parameters": {
+								"variable": "Lives",
+								"value": "Lives + 1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 376929464666829,
+							"parameters": {
+								"variable": "FoodCollected",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 253573304804117
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 880274624056282,
+							"parameters": {
+								"variable": "Lives",
+								"comparison": 0,
+								"value": "2"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 723260669877928,
+							"parameters": {
+								"variable": "TimeRunning"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Heart2",
+							"sid": 387190008807168,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 806477635078599
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 909684843149445,
+							"parameters": {
+								"variable": "Lives",
+								"comparison": 0,
+								"value": "3"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 460657393244399,
+							"parameters": {
+								"variable": "TimeRunning"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Heart3",
+							"sid": 778551868034054,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 634401043484080
+				}
+			],
+			"sid": 931100095237827
 		}
 	],
 	"sid": 986032683225876

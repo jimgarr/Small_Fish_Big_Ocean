@@ -1,0 +1,127 @@
+{
+	"name": "Food",
+	"plugin-id": "Sprite",
+	"sid": 872035846700087,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "falling",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 217212616934296
+		},
+		{
+			"name": "respawnTimer",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 454956392156060
+		},
+		{
+			"name": "moveType",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 810883450598261
+		},
+		{
+			"name": "xSpeed",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 863699597000263
+		},
+		{
+			"name": "driftSpeed",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 867200373037950
+		},
+		{
+			"name": "waveOffset",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 738373855037369
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 740,
+						"height": 838,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 3085317,
+						"collisionPoly": {
+							"points": [
+								0.7125748502994012,
+								0,
+								0.7964071856287425,
+								0.01639344262295082,
+								0.8323353293413174,
+								0.040983606557377046,
+								0.8682634730538922,
+								0.07377049180327869,
+								0.9161676646706587,
+								0.13114754098360656,
+								0.9401197604790419,
+								0.1721311475409836,
+								0.9640718562874252,
+								0.23770491803278687,
+								1,
+								0.4344262295081967,
+								1,
+								0.6147540983606558,
+								0.9880239520958084,
+								0.680327868852459,
+								0.9700598802395209,
+								0.7295081967213115,
+								0.7425149700598802,
+								1,
+								0.20359281437125748,
+								0.9754098360655737,
+								0.12574850299401197,
+								0.9426229508196722,
+								0.011976047904191617,
+								0.819672131147541,
+								0,
+								0.7622950819672131,
+								0,
+								0.5901639344262295,
+								0.0658682634730539,
+								0.30327868852459017,
+								0.08982035928143713,
+								0.2540983606557377,
+								0.1497005988023952,
+								0.1885245901639344
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 150702915478207,
+				"name": "food",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

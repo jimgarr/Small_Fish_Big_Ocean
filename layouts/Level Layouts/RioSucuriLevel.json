@@ -894,6 +894,50 @@
 						"z": 0,
 						"angle": 0
 					}
+				},
+				{
+					"type": "Food",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "food",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 170,
+					"sid": 623186507956548,
+					"tags": "",
+					"instanceVariables": {
+						"falling": false,
+						"respawnTimer": 0,
+						"moveType": 0,
+						"xSpeed": 0,
+						"driftSpeed": 0,
+						"waveOffset": 0
+					},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 623186507956548,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 381,
+						"y": 141,
+						"width": 20.15437770201146,
+						"height": 17.054991593034515,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
 				}
 			],
 			"sid": 925225049722785,
