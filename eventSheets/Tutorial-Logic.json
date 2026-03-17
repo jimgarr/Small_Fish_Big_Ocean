@@ -316,6 +316,56 @@
 				}
 			],
 			"sid": 391460904527160
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 445245203561729,
+					"parameters": {
+						"object": "Tutorial_BackButton"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 164611530808912,
+					"parameters": {
+						"layout": "Title"
+					}
+				}
+			],
+			"sid": 667283525339801
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 355104485062895,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Tutorial_BackButton"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 376303761576327,
+					"parameters": {
+						"layout": "Title"
+					}
+				}
+			],
+			"sid": 444635756093714
 		}
 	],
 	"sid": 483077984750016

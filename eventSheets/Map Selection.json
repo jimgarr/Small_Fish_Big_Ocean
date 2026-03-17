@@ -12,6 +12,56 @@
 			"sid": 807132297777197
 		},
 		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 624897161961232,
+					"parameters": {
+						"object": "Selection_BackButton"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 379638592876168,
+					"parameters": {
+						"layout": "Title"
+					}
+				}
+			],
+			"sid": 324808746610260
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 500110077457712,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Selection_BackButton"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 489448715455739,
+					"parameters": {
+						"layout": "Title"
+					}
+				}
+			],
+			"sid": 467773542092015
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Map Select Logic",

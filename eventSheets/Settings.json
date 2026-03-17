@@ -1,0 +1,368 @@
+{
+	"name": "Settings",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 439970468392483,
+					"parameters": {
+						"object": "SettingsBackButton"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 575983702956299,
+					"parameters": {
+						"layout": "Title"
+					}
+				}
+			],
+			"sid": 296798713229259
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 465474459428186,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "SettingsBackButton"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 804983315702681,
+					"parameters": {
+						"layout": "Title"
+					}
+				}
+			],
+			"sid": 314345794020503
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 580026490219327,
+					"parameters": {
+						"object": "15_Seconds"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 458673539284776,
+					"parameters": {
+						"variable": "WaveDuration",
+						"value": "15"
+					}
+				}
+			],
+			"sid": 662912344840157
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 286469791429481,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "15_Seconds"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 716665805706937,
+					"parameters": {
+						"variable": "WaveDuration",
+						"value": "15"
+					}
+				}
+			],
+			"sid": 846498195325709
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 209030926236309,
+					"parameters": {
+						"object": "30_Seconds"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 968669255886328,
+					"parameters": {
+						"variable": "WaveDuration",
+						"value": "30"
+					}
+				}
+			],
+			"sid": 597498486088249
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 688096773968410,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "30_Seconds"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 659724516986870,
+					"parameters": {
+						"variable": "WaveDuration",
+						"value": "30"
+					}
+				}
+			],
+			"sid": 947562557991726
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 377704612366666,
+					"parameters": {
+						"object": "60_Seconds"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 823350408377780,
+					"parameters": {
+						"variable": "WaveDuration",
+						"value": "60"
+					}
+				}
+			],
+			"sid": 999184118885207
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 245248082407022,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "60_Seconds"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 627635893212810,
+					"parameters": {
+						"variable": "WaveDuration",
+						"value": "60"
+					}
+				}
+			],
+			"sid": 134831415740458
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 147760198069785,
+					"parameters": {
+						"object": "SelectBlueFish"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 890253080999937,
+					"parameters": {
+						"variable": "Selected_Fish",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 859600148547333
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 683702600387612,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "SelectBlueFish"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 674078485774778,
+					"parameters": {
+						"variable": "Selected_Fish",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 617404192816749
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 922567886153070,
+					"parameters": {
+						"object": "SelectNemo"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 201282955592803,
+					"parameters": {
+						"variable": "Selected_Fish",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 159710223075846
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 327351559591148,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "SelectNemo"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 356947979012847,
+					"parameters": {
+						"variable": "Selected_Fish",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 498715487594082
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 311442722025641,
+					"parameters": {
+						"object": "SelectRedFish"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 850613261115627,
+					"parameters": {
+						"variable": "Selected_Fish",
+						"value": "2"
+					}
+				}
+			],
+			"sid": 585120789409936
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 884150257082569,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "SelectRedFish"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 408955809078947,
+					"parameters": {
+						"variable": "Selected_Fish",
+						"value": "2"
+					}
+				}
+			],
+			"sid": 709968338522083
+		}
+	],
+	"sid": 457074311295698
+}

@@ -100,6 +100,56 @@
 				}
 			],
 			"sid": 171665863661791
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 477656456725352,
+					"parameters": {
+						"object": "SettingsButton"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 493948606016302,
+					"parameters": {
+						"layout": "Settings"
+					}
+				}
+			],
+			"sid": 202235233802468
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 882335900543451,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "SettingsButton"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 610172178176765,
+					"parameters": {
+						"layout": "Settings"
+					}
+				}
+			],
+			"sid": 151863961299500
 		}
 	],
 	"sid": 247589612251367

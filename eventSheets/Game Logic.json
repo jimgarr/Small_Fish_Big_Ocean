@@ -92,6 +92,16 @@
 			"sid": 547259699910551
 		},
 		{
+			"eventType": "variable",
+			"name": "Selected_Fish",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "Chooses the fish that you play as",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 932771587438751
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Wave Logic",
@@ -308,6 +318,84 @@
 						}
 					],
 					"sid": 691768945772207
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 269479100020175,
+							"parameters": {
+								"variable": "Selected_Fish",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Level_1_fish",
+							"sid": 716859201333467,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 371150684881913
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 548391543616182,
+							"parameters": {
+								"variable": "Selected_Fish",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Level_1_fish",
+							"sid": 436220724518060,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 544628944225487
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 782115555632283,
+							"parameters": {
+								"variable": "Selected_Fish",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Level_1_fish",
+							"sid": 820190835467113,
+							"parameters": {
+								"frame-number": "2"
+							}
+						}
+					],
+					"sid": 622549491918414
 				}
 			],
 			"sid": 261271709393339

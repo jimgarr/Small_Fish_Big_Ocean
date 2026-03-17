@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 47600,
+	"savedWithRelease": 47602,
 	"name": "New project",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -149,7 +149,18 @@
 			"PopupScreenTR2",
 			"PopupScreenCR",
 			"PopupScreenCR2",
-			"Food"
+			"Food",
+			"Sprite",
+			"SettingsBackButton",
+			"15_Seconds",
+			"30_Seconds",
+			"60_Seconds",
+			"Tutorial_BackButton",
+			"Sprite2",
+			"Selection_BackButton",
+			"SelectBlueFish",
+			"SelectRedFish",
+			"SelectNemo"
 		],
 		"subfolders": [
 			{
@@ -192,14 +203,15 @@
 	},
 	"layouts": {
 		"items": [
-			"Title",
 			"MapSelection",
 			"EndGame",
-			"Tutorial"
+			"Tutorial",
+			"Settings"
 		],
 		"subfolders": [
 			{
 				"items": [
+					"Title",
 					"CyprusBeforePopUp",
 					"CyprusAfterPopUp",
 					"RioSucuriAfterPopUp",
@@ -236,7 +248,8 @@
 			"Map Selection",
 			"Game Logic",
 			"End Game",
-			"Tutorial-Logic"
+			"Tutorial-Logic",
+			"Settings"
 		],
 		"subfolders": [
 			{
